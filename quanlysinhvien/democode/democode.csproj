@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{06049604-8CBD-49FC-A4ED-5F6229ED423B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>democode</RootNamespace>
+    <AssemblyName>democode</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="demoDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>demoDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="demoDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>demoDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="demoDataSet21.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>demoDataSet21.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmDSSinhVienTheoKhoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDSSinhVienTheoKhoa.Designer.cs">
+      <DependentUpon>frmDSSinhVienTheoKhoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInDSMonHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInDSMonHoc.Designer.cs">
+      <DependentUpon>frmInDSMonHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmKhoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKhoa.Designer.cs">
+      <DependentUpon>frmKhoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmlogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmlogin.Designer.cs">
+      <DependentUpon>frmlogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmmain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmmain.Designer.cs">
+      <DependentUpon>frmmain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmmonhoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmmonhoc.Designer.cs">
+      <DependentUpon>frmmonhoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSinhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSinhVien.Designer.cs">
+      <DependentUpon>frmSinhVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTimKiemSinhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTimKiemSinhVien.Designer.cs">
+      <DependentUpon>frmTimKiemSinhVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_TK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_TK.Designer.cs">
+      <DependentUpon>frm_TK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sinhvien_khoa.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sinhvien_khoa.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmDSSinhVienTheoKhoa.resx">
+      <DependentUpon>frmDSSinhVienTheoKhoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInDSMonHoc.resx">
+      <DependentUpon>frmInDSMonHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKhoa.resx">
+      <DependentUpon>frmKhoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmlogin.resx">
+      <DependentUpon>frmlogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmmain.resx">
+      <DependentUpon>frmmain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmmonhoc.resx">
+      <DependentUpon>frmmonhoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSinhVien.resx">
+      <DependentUpon>frmSinhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTimKiemSinhVien.resx">
+      <DependentUpon>frmTimKiemSinhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_TK.resx">
+      <DependentUpon>frm_TK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="rpt_DSSinhVienTheoKhoa.rdlc" />
+    <EmbeddedResource Include="rpt_monhoc.rdlc" />
+    <None Include="demoDataSet.xsc">
+      <DependentUpon>demoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="demoDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>demoDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="demoDataSet.xss">
+      <DependentUpon>demoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="demoDataSet11.xsc">
+      <DependentUpon>demoDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="demoDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>demoDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="demoDataSet11.xss">
+      <DependentUpon>demoDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="demoDataSet21.xsc">
+      <DependentUpon>demoDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="demoDataSet21.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>demoDataSet21.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="demoDataSet21.xss">
+      <DependentUpon>demoDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="sinhvien_khoa.xsc">
+      <DependentUpon>sinhvien_khoa.xsd</DependentUpon>
+    </None>
+    <None Include="sinhvien_khoa.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sinhvien_khoa.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sinhvien_khoa.xss">
+      <DependentUpon>sinhvien_khoa.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
