@@ -1,0 +1,11 @@
+E:\code_demo\CongTruNhanChia\CongTruNhanChia2Lop\bin\Debug\CongTruNhanChia2Lop.exe.config
+E:\code_demo\CongTruNhanChia\CongTruNhanChia2Lop\obj\Debug\CongTruNhanChia2Lop.csprojResolveAssemblyReference.cache
+E:\code_demo\CongTruNhanChia\CongTruNhanChia2Lop\obj\Debug\CongTruNhanChia2Lop.Properties.Resources.resources
+E:\code_demo\CongTruNhanChia\CongTruNhanChia2Lop\obj\Debug\CongTruNhanChia2Lop.csproj.GenerateResource.Cache
+E:\code_demo\CongTruNhanChia\CongTruNhanChia2Lop\bin\Debug\CongTruNhanChia2Lop.exe
+E:\code_demo\CongTruNhanChia\CongTruNhanChia2Lop\bin\Debug\CongTruNhanChia2Lop.pdb
+E:\code_demo\CongTruNhanChia\CongTruNhanChia2Lop\bin\Debug\congtrunhanchia.dll
+E:\code_demo\CongTruNhanChia\CongTruNhanChia2Lop\bin\Debug\congtrunhanchia.pdb
+E:\code_demo\CongTruNhanChia\CongTruNhanChia2Lop\obj\Debug\CongTruNhanChia2Lop.exe
+E:\code_demo\CongTruNhanChia\CongTruNhanChia2Lop\obj\Debug\CongTruNhanChia2Lop.pdb
+E:\code_demo\CongTruNhanChia\CongTruNhanChia2Lop\obj\Debug\CongTruNhanChia2Lop.frm_main.resources
