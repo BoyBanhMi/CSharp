@@ -75,12 +75,12 @@
             </tr>
             <tr>
                 <td colspan="2">
-                    <asp:Label ID="Label6" runat="server" Font-Size="22pt" ForeColor="Blue" style="text-align: left" Text="Danh Sách Măt Hàng Hiện Có"></asp:Label>
+                    <asp:Label ID="Label6" runat="server" Font-Size="22pt" ForeColor="Blue" style="text-align: left" Text="Danh Sách Mặt Hàng Hiện Có"></asp:Label>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style2" colspan="2" style="text-align: center">
-                    <asp:GridView ID="gv_DSMH" runat="server" Width="287px">
+                    <asp:GridView ID="gv_DSMH" runat="server" Width="490px">
                     </asp:GridView>
                     <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
                 </td>

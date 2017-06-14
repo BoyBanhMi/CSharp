@@ -37,7 +37,7 @@ public static class MatHang_XuLy
     {
         OleDbConnection con = new OleDbConnection(dbconnect.StrConn);
         con.Open();
-        OleDbDataAdapter adap = new OleDbDataAdapter("select * from admin.MatHang1",con);
+        OleDbDataAdapter adap = new OleDbDataAdapter("select row_number() over (order by MaMH) as STT, MaMH, TenMH, DonGia, TenLMH from admin.MatHang1, admin.LoaiMH where admin.MatHang1.MaLMH = admin.LoaiMH.MaLMH",con);
         DataTable ds = new DataTable();
         adap.Fill(ds);
         return ds;

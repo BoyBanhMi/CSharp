@@ -19,7 +19,11 @@ public partial class MatHang : System.Web.UI.Page
         }
         gv_DSMH.DataSource = MatHang_XuLy.DS_MatHang();
         gv_DSMH.DataBind();
-         
+        gv_DSMH.HeaderRow.Cells[0].Text = "STT";
+        gv_DSMH.HeaderRow.Cells[1].Text = "Mã Mặt Hàng";
+        gv_DSMH.HeaderRow.Cells[2].Text = "Tên Mặt Hàng";
+        gv_DSMH.HeaderRow.Cells[3].Text = "Đơn Giá";
+        gv_DSMH.HeaderRow.Cells[4].Text = "Loại Hàng";
     }
     protected void btn_them_Click(object sender, EventArgs e)
     {
