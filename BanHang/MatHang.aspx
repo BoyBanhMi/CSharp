@@ -48,7 +48,7 @@
                     <asp:Label ID="Label4" runat="server" Text="Đơn Giá"></asp:Label>
                 </td>
                 <td>
-                    <asp:TextBox ID="txt_DonGia" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txt_DonGia" runat="server" TextMode="Number"></asp:TextBox>
                 </td>
             </tr>
             <tr>
