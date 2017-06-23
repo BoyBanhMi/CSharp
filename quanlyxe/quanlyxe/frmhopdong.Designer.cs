@@ -34,7 +34,6 @@
             this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.txtTenKhachhang = new System.Windows.Forms.TextBox();
-            this.txtGioiTinh = new System.Windows.Forms.ComboBox();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.txtCMND = new System.Windows.Forms.TextBox();
             this.txtDienThoai = new System.Windows.Forms.TextBox();
@@ -51,6 +50,8 @@
             this.label10 = new System.Windows.Forms.Label();
             this.cmdRefresh = new System.Windows.Forms.Button();
             this.pnThemHopDong = new System.Windows.Forms.Panel();
+            this.rad_Nam = new System.Windows.Forms.RadioButton();
+            this.rad_Nu = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dtgThemKhachHang)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -116,17 +117,6 @@
             this.txtTenKhachhang.Size = new System.Drawing.Size(113, 24);
             this.txtTenKhachhang.TabIndex = 5;
             // 
-            // txtGioiTinh
-            // 
-            this.txtGioiTinh.FormattingEnabled = true;
-            this.txtGioiTinh.Items.AddRange(new object[] {
-            "Nam",
-            "Nu"});
-            this.txtGioiTinh.Location = new System.Drawing.Point(109, 101);
-            this.txtGioiTinh.Name = "txtGioiTinh";
-            this.txtGioiTinh.Size = new System.Drawing.Size(113, 26);
-            this.txtGioiTinh.TabIndex = 1;
-            // 
             // txtDiaChi
             // 
             this.txtDiaChi.Location = new System.Drawing.Point(316, 23);
@@ -175,7 +165,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Yellow;
-            this.label4.Location = new System.Drawing.Point(42, 103);
+            this.label4.Location = new System.Drawing.Point(35, 109);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(57, 16);
             this.label4.TabIndex = 4;
@@ -257,10 +247,11 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.rad_Nu);
+            this.groupBox2.Controls.Add(this.rad_Nam);
             this.groupBox2.Controls.Add(this.dtpNgaySinh);
             this.groupBox2.Controls.Add(this.txtMaKhachHang);
             this.groupBox2.Controls.Add(this.txtDienThoai);
-            this.groupBox2.Controls.Add(this.txtGioiTinh);
             this.groupBox2.Controls.Add(this.txtCMND);
             this.groupBox2.Controls.Add(this.txtDiaChi);
             this.groupBox2.Controls.Add(this.label1);
@@ -300,7 +291,7 @@
             this.cmdRefresh.Name = "cmdRefresh";
             this.cmdRefresh.Size = new System.Drawing.Size(66, 40);
             this.cmdRefresh.TabIndex = 6;
-            this.cmdRefresh.Text = "Refresh";
+            this.cmdRefresh.Text = "Tải Lại";
             this.cmdRefresh.UseVisualStyleBackColor = false;
             this.cmdRefresh.Click += new System.EventHandler(this.cmdRefresh_Click);
             // 
@@ -310,6 +301,28 @@
             this.pnThemHopDong.Name = "pnThemHopDong";
             this.pnThemHopDong.Size = new System.Drawing.Size(1247, 304);
             this.pnThemHopDong.TabIndex = 9;
+            // 
+            // rad_Nam
+            // 
+            this.rad_Nam.AutoSize = true;
+            this.rad_Nam.Location = new System.Drawing.Point(109, 105);
+            this.rad_Nam.Name = "rad_Nam";
+            this.rad_Nam.Size = new System.Drawing.Size(57, 22);
+            this.rad_Nam.TabIndex = 6;
+            this.rad_Nam.TabStop = true;
+            this.rad_Nam.Text = "Nam";
+            this.rad_Nam.UseVisualStyleBackColor = true;
+            // 
+            // rad_Nu
+            // 
+            this.rad_Nu.AutoSize = true;
+            this.rad_Nu.Location = new System.Drawing.Point(172, 105);
+            this.rad_Nu.Name = "rad_Nu";
+            this.rad_Nu.Size = new System.Drawing.Size(46, 22);
+            this.rad_Nu.TabIndex = 7;
+            this.rad_Nu.TabStop = true;
+            this.rad_Nu.Text = "Nữ";
+            this.rad_Nu.UseVisualStyleBackColor = true;
             // 
             // frmhopdong
             // 
@@ -341,7 +354,6 @@
         private System.Windows.Forms.DateTimePicker dtpNgaySinh;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtTenKhachhang;
-        private System.Windows.Forms.ComboBox txtGioiTinh;
         private System.Windows.Forms.TextBox txtDiaChi;
         private System.Windows.Forms.TextBox txtCMND;
         private System.Windows.Forms.TextBox txtDienThoai;
@@ -358,5 +370,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button cmdSua;
+        private System.Windows.Forms.RadioButton rad_Nu;
+        private System.Windows.Forms.RadioButton rad_Nam;
     }
 }

@@ -40,16 +40,10 @@
             this.cbb_MaKH = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dtgv_xemHD = new System.Windows.Forms.DataGridView();
-            this.dtp_ThoihanHD = new System.Windows.Forms.DateTimePicker();
-            this.dtp_NgayThanhToan = new System.Windows.Forms.DateTimePicker();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.lbl_tienphat = new System.Windows.Forms.Label();
-            this.txt_tienphat = new System.Windows.Forms.TextBox();
             this.dtp_chitiet = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.btn_XemHopDong = new System.Windows.Forms.Button();
+            this.txt_ghichu = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_xemHD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtp_chitiet)).BeginInit();
             this.SuspendLayout();
@@ -86,6 +80,7 @@
             this.btn_thanhtoan.Text = "Thanh toán";
             this.btn_thanhtoan.UseVisualStyleBackColor = true;
             this.btn_thanhtoan.Visible = false;
+            this.btn_thanhtoan.Click += new System.EventHandler(this.btn_thanhtoan_Click);
             // 
             // cbb_NhanVien
             // 
@@ -172,57 +167,6 @@
             this.dtgv_xemHD.Size = new System.Drawing.Size(803, 119);
             this.dtgv_xemHD.TabIndex = 18;
             // 
-            // dtp_ThoihanHD
-            // 
-            this.dtp_ThoihanHD.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp_ThoihanHD.Location = new System.Drawing.Point(196, 181);
-            this.dtp_ThoihanHD.Name = "dtp_ThoihanHD";
-            this.dtp_ThoihanHD.Size = new System.Drawing.Size(111, 20);
-            this.dtp_ThoihanHD.TabIndex = 19;
-            // 
-            // dtp_NgayThanhToan
-            // 
-            this.dtp_NgayThanhToan.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp_NgayThanhToan.Location = new System.Drawing.Point(503, 180);
-            this.dtp_NgayThanhToan.Name = "dtp_NgayThanhToan";
-            this.dtp_NgayThanhToan.Size = new System.Drawing.Size(125, 20);
-            this.dtp_NgayThanhToan.TabIndex = 19;
-            this.dtp_NgayThanhToan.ValueChanged += new System.EventHandler(this.dtp_NgayThanhToan_ValueChanged);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(68, 184);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 13);
-            this.label3.TabIndex = 20;
-            this.label3.Text = "Thời Hạn Hợp Đồng";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(384, 185);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(94, 13);
-            this.label4.TabIndex = 20;
-            this.label4.Text = "Ngày Thanh Toán";
-            // 
-            // lbl_tienphat
-            // 
-            this.lbl_tienphat.AutoSize = true;
-            this.lbl_tienphat.Location = new System.Drawing.Point(414, 217);
-            this.lbl_tienphat.Name = "lbl_tienphat";
-            this.lbl_tienphat.Size = new System.Drawing.Size(64, 13);
-            this.lbl_tienphat.TabIndex = 21;
-            this.lbl_tienphat.Text = "Số tiền phạt";
-            // 
-            // txt_tienphat
-            // 
-            this.txt_tienphat.Location = new System.Drawing.Point(503, 214);
-            this.txt_tienphat.Name = "txt_tienphat";
-            this.txt_tienphat.Size = new System.Drawing.Size(125, 20);
-            this.txt_tienphat.TabIndex = 22;
-            // 
             // dtp_chitiet
             // 
             this.dtp_chitiet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -234,18 +178,11 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(121, 220);
+            this.label6.Location = new System.Drawing.Point(80, 201);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(50, 13);
+            this.label6.Size = new System.Drawing.Size(44, 13);
             this.label6.TabIndex = 21;
-            this.label6.Text = "Tiền Cọc";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(196, 217);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(111, 20);
-            this.textBox1.TabIndex = 22;
+            this.label6.Text = "Ghi chú";
             // 
             // btn_XemHopDong
             // 
@@ -257,6 +194,13 @@
             this.btn_XemHopDong.UseVisualStyleBackColor = true;
             this.btn_XemHopDong.Click += new System.EventHandler(this.btn_XemHopDong_Click);
             // 
+            // txt_ghichu
+            // 
+            this.txt_ghichu.Location = new System.Drawing.Point(155, 198);
+            this.txt_ghichu.Name = "txt_ghichu";
+            this.txt_ghichu.Size = new System.Drawing.Size(549, 20);
+            this.txt_ghichu.TabIndex = 22;
+            // 
             // frm_TraTien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -264,14 +208,8 @@
             this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(827, 599);
             this.Controls.Add(this.btn_XemHopDong);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_ghichu);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.txt_tienphat);
-            this.Controls.Add(this.lbl_tienphat);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.dtp_NgayThanhToan);
-            this.Controls.Add(this.dtp_ThoihanHD);
             this.Controls.Add(this.dtp_chitiet);
             this.Controls.Add(this.dtgv_xemHD);
             this.Controls.Add(this.label2);
@@ -310,15 +248,9 @@
         private System.Windows.Forms.ComboBox cbb_MaKH;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dtgv_xemHD;
-        private System.Windows.Forms.DateTimePicker dtp_ThoihanHD;
-        private System.Windows.Forms.DateTimePicker dtp_NgayThanhToan;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label lbl_tienphat;
-        private System.Windows.Forms.TextBox txt_tienphat;
         private System.Windows.Forms.DataGridView dtp_chitiet;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btn_XemHopDong;
+        private System.Windows.Forms.TextBox txt_ghichu;
     }
 }

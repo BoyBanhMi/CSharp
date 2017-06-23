@@ -55,9 +55,10 @@ namespace quanlyxe
         {
             SqlConnection con = new SqlConnection(Program.strconn);
             con.Open();
-            SqlDataAdapter adap = new SqlDataAdapter("select * from tb_NhanVirn", con);
+            SqlDataAdapter adap = new SqlDataAdapter("select * from tb_NhanVien", con);
             DataTable ds = new DataTable();
             adap.Fill(ds);
+            con.Close();
             return ds;
         }
         DataTable DS_HopDong()
@@ -67,24 +68,59 @@ namespace quanlyxe
             SqlDataAdapter adap = new SqlDataAdapter("select * from tb_HopDong",con);
             DataTable ds = new DataTable();
             adap.Fill(ds);
+            con.Close();
             return ds;
         }
-        private void thanhtoan()
+        DataTable DS_PhieuTra()
         {
-            int tongtien = 0;
-
             SqlConnection con = new SqlConnection(Program.strconn);
             con.Open();
-            SqlCommand sqlcm = new SqlCommand("insert into tb_ChiTietHopDong values()");
-            if (dtp_NgayThanhToan.Value > dtp_ThoihanHD.Value)
-            {
-                tongtien = 
-            }
+            SqlDataAdapter adap = new SqlDataAdapter("select * from tb_PhieuTra", con);
+            DataTable ds = new DataTable();
+            adap.Fill(ds);
+            con.Close();
+            return ds;
+        }
+        private void thanhtoan(string mahd, string makh, string manv, string ghichu)
+        {
+            //try
+           // {
+
+                int gia = 500;
+                SqlConnection con = new SqlConnection(Program.strconn);
+                con.Open();
+                SqlCommand sqlcm = new SqlCommand("select DAY(NgayLapHopDong),DAY(HanThanhToan), TienCoc, NgayLapHopDong, HanThanhToan from tb_HopDong where MaHopDong='" + mahd + "'", con);
+                SqlDataReader dr = sqlcm.ExecuteReader();
+                
+
+                if (dr.Read())
+                {
+                    string ngaylapHD = dr[3].ToString();
+                    string ngaytra = dr[4].ToString();
+                    int ngaylap = Convert.ToInt32(dr[0]);
+                    int ngaythanhtoan = Convert.ToInt32(dr[1]);
+                    int tiencoc = Convert.ToInt32(dr[2]);
+                    int tongtien = (ngaythanhtoan - ngaylap) * gia - tiencoc;
+                    
+                    SqlCommand nhap = new SqlCommand("insert into tb_PhieuTra values('" + manv + "','" + makh + "','" + mahd + "','" + ngaylapHD + "','" + ngaytra + "','" + tongtien + "',1,'" + ghichu + "')", con);
+                    nhap.ExecuteNonQuery();
+                    SqlCommand update = new SqlCommand("update tb_HopDong set TinhTrangThanhToan = 'True' where MaHopDong = '" + mahd + "'", con);
+                    update.ExecuteNonQuery();
+                    con.Close();
+                    MessageBox.Show("Nhập Thành công");
+    
+                }
+           // }
+            //catch
+            //{
+            //    MessageBox.Show("Nhập thất bại");
+           // }
+            
         }
         private void btn_XemHopDong_Click(object sender, EventArgs e)
         {
             if (cbb_MaHD.Text == "" || cbb_MaKH.Text== "") 
-            { 
+            {  
                 MessageBox.Show("Các trường không được để trống","Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
@@ -97,16 +133,7 @@ namespace quanlyxe
 
         private void dtp_NgayThanhToan_ValueChanged(object sender, EventArgs e)
         {
-            if (dtp_ThoihanHD.Value < dtp_NgayThanhToan.Value)
-            {
-                txt_tienphat.Visible = true;
-                lbl_tienphat.Visible = true;
-            }
-            else
-            {
-                txt_tienphat.Visible = false;
-                lbl_tienphat.Visible = false;
-            }
+            
         }
 
         private void cb_xacnhan_CheckedChanged(object sender, EventArgs e)
@@ -119,6 +146,12 @@ namespace quanlyxe
             {
                 btn_thanhtoan.Visible = false;
             }
+        }
+
+        private void btn_thanhtoan_Click(object sender, EventArgs e)
+        {
+            thanhtoan(cbb_MaHD.Text, cbb_MaKH.Text, cbb_NhanVien.Text, txt_ghichu.Text);
+            dtp_chitiet.DataSource = DS_PhieuTra();
         }
     }
 }

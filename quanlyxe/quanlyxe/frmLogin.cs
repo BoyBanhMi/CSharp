@@ -19,25 +19,16 @@ namespace quanlyxe
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
-            cbb_role.DataSource = ds_CV();
-            cbb_role.DisplayMember = "TenCV";
-            cbb_role.ValueMember = "TenCV";
+            
         }
-        DataTable ds_CV()
-        {
-            string cmd = "SELECT * FROM tb_role";
-            SqlDataAdapter adap = new SqlDataAdapter(cmd, Program.strconn);
-            DataTable ds = new DataTable();
-            adap.Fill(ds);
-            return ds;
-        }
+       
         private void btnlogin_Click(object sender, EventArgs e)
         {
             try
             {
                 SqlConnection con = new SqlConnection(Program.strconn);
                 con.Open();
-                string sqlcn = "Select role from tb_login Where userid='" + txtuser.Text + "' And pass='"+txtpass.Text+"'";
+                string sqlcn = "Select role from tb_Login Where userid='" + txtuser.Text + "' And pass='"+txtpass.Text+"'";
                 SqlCommand command = new SqlCommand(sqlcn, con);
                 SqlDataReader dr = command.ExecuteReader();
                 string quyen = "";

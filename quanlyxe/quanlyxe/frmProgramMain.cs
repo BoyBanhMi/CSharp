@@ -121,6 +121,15 @@ namespace quanlyxe
                 MessageBox.Show("Bạn Không Có quyền truy cập","Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
          }
+
+        private void btn_baocao_Click(object sender, EventArgs e)
+        {
+            frmBaoCao f = new frmBaoCao();
+            f.TopLevel = false;
+            f.Show();
+            pnProMain.Controls.Clear();
+            pnProMain.Controls.Add(f);
+        }
         }
     }
 

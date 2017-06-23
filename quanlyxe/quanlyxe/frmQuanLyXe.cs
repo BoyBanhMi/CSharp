@@ -36,15 +36,7 @@ namespace quanlyxe
         private void frmQuanLyXe_Load(object sender, EventArgs e)
         {
             Load_maxe();
-            SqlConnection con = new SqlConnection(Program.strconn);
-            con.Open();
-            SqlDataAdapter da = new SqlDataAdapter("select MaXe as [Mã xe], TenXe as [Tên Xe], NgaySanXuat as [Ngày sản xuất], HangXe as [Hãng xe], BienKiemSoat as [ Biển kiểm soát], SucChua as [SucChua], LoaiXe as [Loại xe], NgayMuaXe as [Ngày Mua Xe], TinhTrangXe as [Tình trạng xe] from tb_Xe ", con);
-            DataTable dt = new DataTable();
-            dt.Clear();
-            da.Fill(dt);
-            dgvQuanLyXe.DataSource = dt;
-            con.Close();
-            da.Dispose();
+            dgvQuanLyXe.DataSource = DS_Xe();
         }
 
         private void cmdTHem_Click(object sender, EventArgs e)
@@ -55,13 +47,7 @@ namespace quanlyxe
                 con.Open();
                 SqlCommand cmd = new SqlCommand("insert into tb_Xe (MaXe, TenXe, NgaySanXuat, HangXe, BienKiemSoat, SucChua, LoaiXe, NgayMuaXe, TinhTrangXe) values ('" + txtMaXe.Text + "', '" + txtTenXe.Text + "', '" + dtpNgaySanXuat.Text + "', '" + txtHangXe.Text + "', '" + txtBienKiemSoat.Text + "', '" + txtSucChua.Text + "', '" + txtLoaiXe.Text + "', '" + dtpNgayMuaXe.Text + "',  '" + txtTinhTrangXe.Text + "')", con);
                 cmd.ExecuteNonQuery();
-                SqlDataAdapter da = new SqlDataAdapter("select MaXe as [Mã xe], TenXe as [Tên Xe], NgaySanXuat as [Ngày sản xuất], HangXe as [Hãng xe], BienKiemSoat as [ Biển kiểm soát], SucChua as [SucChua], LoaiXe as [Loại xe], NgayMuaXe as [Ngày Mua Xe], TinhTrangXe as [Tình trạng xe] from tb_Xe ", con);
-                DataTable dt = new DataTable();
-                dt.Clear();
-                da.Fill(dt);
-                dgvQuanLyXe.DataSource = dt;
-                con.Close();
-                da.Dispose();
+                dgvQuanLyXe.DataSource = DS_Xe();
                 MessageBox.Show("Thêm thành công", "Quản lý Xe", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch
@@ -90,13 +76,7 @@ namespace quanlyxe
                 con.Open();
                 SqlCommand cmd = new SqlCommand("update  tb_Xe set TenXe = '" + txtTenXe.Text + "', NgaySanXuat = '" + dtpNgaySanXuat.Text + "', HangXe = '" + txtHangXe.Text + "', BienKiemSoat = '" + txtBienKiemSoat.Text + "', SucChua = '" + txtSucChua.Text + "', LoaiXe = '" + txtLoaiXe.Text + "', NgayMuaXe = '" + dtpNgayMuaXe.Text + "', TinhTrangXe = '" + txtTinhTrangXe.Text + "' Where  MaXe = '" + txtMaXe.Text + "' ", con);
                 cmd.ExecuteNonQuery();
-                SqlDataAdapter da = new SqlDataAdapter("select MaXe as [Mã xe], TenXe as [Tên Xe], NgaySanXuat as [Ngày sản xuất], HangXe as [Hãng xe], BienKiemSoat as [ Biển kiểm soát], SucChua as [SucChua], LoaiXe as [Loại xe], NgayMuaXe as [Ngày Mua Xe] , TinhTrangXe as [Tình trạng xe] from tb_Xe ", con);
-                DataTable dt = new DataTable();
-                dt.Clear();
-                da.Fill(dt);
-                dgvQuanLyXe.DataSource = dt;
-                con.Close();
-                da.Dispose();
+                dgvQuanLyXe.DataSource = DS_Xe();
                 MessageBox.Show("Sửa thành công", "Quản lý  Xe", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch
@@ -110,41 +90,33 @@ namespace quanlyxe
             SqlConnection con = new SqlConnection(Program.strconn);
             con.Open();
             SqlDataAdapter da = new SqlDataAdapter("select MaXe as [Mã xe], TenXe as [Tên Xe], NgaySanXuat as [Ngày sản xuất], HangXe as [Hãng xe], BienKiemSoat as [ Biển kiểm soát], SucChua as [SucChua], LoaiXe as [Loại xe], NgayMuaXe as [Ngày Mua Xe] , TinhTrangXe as [Tình trạng xe] from tb_Xe Where MaXe = ('" + txtMaXe.Text + "') ", con);
-            DataTable dt = new DataTable();
-            dt.Clear();
-            da.Fill(dt);
-            dgvQuanLyXe.DataSource = dt;
-            con.Close();
-            da.Dispose();
+            dgvQuanLyXe.DataSource = DS_Xe();
         }
 
         private void cmdXoa_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(Program.strconn);
             con.Open();
-            SqlCommand cmd = new SqlCommand("delete tb_ChiTietHopDong where MaXe = '" + txtMaXe.Text + "' ", con);
-            cmd.ExecuteNonQuery();
-            con.Close();
-
-            con.Open();
-            SqlCommand cmd1 = new SqlCommand("delete tb_ChiTietPhieuTra where MaXe = '" + txtMaXe.Text + "' ", con);
-            cmd1.ExecuteNonQuery();
-            con.Close();
-
-            con.Open();
-            SqlCommand cmd2 = new SqlCommand("delete tb_Xe where MaXe = '" + txtMaXe.Text + "'", con);
+ 
+            SqlCommand cmd2 = new SqlCommand("delete from tb_Xe where MaXe = '" + txtMaXe.Text + "'", con);
             cmd2.ExecuteNonQuery();
             con.Close();
 
+            dgvQuanLyXe.DataSource = DS_Xe();
+            MessageBox.Show("Xóa xe thành công", "Quản lý xe", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        public DataTable DS_Xe()
+        {
+            SqlConnection con = new SqlConnection(Program.strconn);
             con.Open();
             SqlDataAdapter da = new SqlDataAdapter("select MaXe as [Mã xe], TenXe as [Tên Xe], NgaySanXuat as [Ngày sản xuất], HangXe as [Hãng xe], BienKiemSoat as [ Biển kiểm soát], SucChua as [SucChua], LoaiXe as [Loại xe], NgayMuaXe as [Ngày Mua Xe] , TinhTrangXe as [Tình trạng xe] from tb_Xe Where MaXe = ('" + txtMaXe.Text + "') ", con);
             DataTable dt = new DataTable();
             dt.Clear();
             da.Fill(dt);
-            dgvQuanLyXe.DataSource = dt;
+           
             con.Close();
             da.Dispose();
-            MessageBox.Show("Xóa xe thành công", "Quản lý xe", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            return dt;
         }
     }
 }

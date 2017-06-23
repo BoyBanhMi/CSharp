@@ -79,6 +79,7 @@
             this.txtinsert.Name = "txtinsert";
             this.txtinsert.Size = new System.Drawing.Size(272, 20);
             this.txtinsert.TabIndex = 3;
+            this.txtinsert.TextChanged += new System.EventHandler(this.txtinsert_TextChanged);
             // 
             // label2
             // 

@@ -34,22 +34,38 @@ namespace quanlyxe
             con.Close();
             da1.Dispose();
         }
-
+        public DataTable DS_KH()
+        {
+            SqlConnection con = new SqlConnection(Program.strconn);
+            con.Open();
+            SqlDataAdapter da = new SqlDataAdapter("select row_number() over (order by MaKhachHang) as STT, MaKhachHang as [Mã khách hàng], TenKhachHang as [Tên khách hàng], NgaySinh as [Ngày sinh], GioiTinh as [Giới tính], DiaChi as [ Địa chỉ], DienThoai as [Điện thoại], CMND from tb_KhachHang ", con);
+            DataTable dt = new DataTable();
+            dt.Clear();
+            da.Fill(dt);
+            
+            con.Close();
+            da.Dispose();
+            return dt;
+        }
         private void cmdThem_Click(object sender, EventArgs e)
         {
             try
             {
+                int gt;
+                if (rad_Nam.Checked == true)
+                {
+                    gt = 1;
+                }
+                else
+                {
+                    gt = 0;
+                }
                 SqlConnection con = new SqlConnection(Program.strconn);
                 con.Open();
-                SqlCommand cmd = new SqlCommand("insert into tb_KhachHang (MaKhachHang, TenKhachHang, NgaySinh, GioiTinh, DiaChi, CMND, DienThoai) values ('" + txtMaKhachHang.Text + "', '" + txtTenKhachhang.Text + "', '" + dtpNgaySinh.Text + "', '" + txtGioiTinh.Text + "', '" + txtDiaChi.Text + "', '" + txtCMND.Text + "', '" + txtDienThoai.Text + "')", con);
+                SqlCommand cmd = new SqlCommand("insert into tb_KhachHang (MaKhachHang, TenKhachHang, NgaySinh, GioiTinh, DiaChi, CMND, DienThoai) values ('" + txtMaKhachHang.Text + "', '" + txtTenKhachhang.Text + "', '" + dtpNgaySinh.Text + "', '" + gt + "', '" + txtDiaChi.Text + "', '" + txtCMND.Text + "', '" + txtDienThoai.Text + "')", con);
                 cmd.ExecuteNonQuery();
-                SqlDataAdapter da = new SqlDataAdapter("select MaKhachHang as [Mã khách hàng], TenKhachHang as [Tên khách hàng], NgaySinh as [Ngày sinh], GioiTinh as [Giới tính], DiaChi as [ Địa chỉ], DienThoai as [Điện thoại], CMND from tb_KhachHang ", con);
-                DataTable dt = new DataTable();
-                dt.Clear();
-                da.Fill(dt);
-                dtgThemKhachHang.DataSource = dt;
                 con.Close();
-                da.Dispose();
+                dtgThemKhachHang.DataSource = DS_KH();
                 MessageBox.Show("Thêm thành công,Chuyển sang bước tiếp theo để tiếp tục việc thêm hợp đồng", "Quản lý khách hàng", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch
@@ -60,15 +76,7 @@ namespace quanlyxe
 
         private void cmdRefresh_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(Program.strconn);
-            con.Open();
-            SqlDataAdapter da = new SqlDataAdapter("select MaKhachHang as [Mã khách hàng], TenKhachHang as [Tên khách hàng], NgaySinh as [Ngày sinh], GioiTinh as [Giới tính], DiaChi as [ Địa chỉ], DienThoai as [Điện thoại], CMND from tb_KhachHang where MaKhachHang = '" + txtMaKhachHang.Text + "'", con);
-            DataTable dt = new DataTable();
-            dt.Clear();
-            da.Fill(dt);
-            dtgThemKhachHang.DataSource = dt;
-            con.Close();
-            da.Dispose();
+            dtgThemKhachHang.DataSource = DS_KH();
         }
 
         private void txtNext_Click(object sender, EventArgs e)
@@ -84,33 +92,28 @@ namespace quanlyxe
         private void frmhopdong_Load(object sender, EventArgs e)
         {
             Load_MaKH();
-            SqlConnection con = new SqlConnection(Program.strconn);
-            con.Open();
-            SqlDataAdapter da = new SqlDataAdapter("select tb_KhachHang.MaKhachHang as [Mã khách hàng], TenKhachHang as [Tên khách hàng], NgaySinh as [Ngày sinh], GioiTinh as [Giới tính], DiaChi as [ Địa chỉ], DienThoai as [Điện thoại], CMND  from tb_KhachHang,tb_HopDong ", con);
-            DataTable dt = new DataTable();
-            dt.Clear();
-            da.Fill(dt);
-            dtgThemKhachHang.DataSource = dt;
-            con.Close();
-            da.Dispose();
+            dtgThemKhachHang.DataSource = DS_KH();
         }
 
         private void cmdSua_Click(object sender, EventArgs e)
         {
             try
             {
+                int gt;
+                if (rad_Nam.Checked == true)
+                {
+                    gt = 1;
+                }
+                else
+                {
+                    gt = 0;
+                }
                 SqlConnection con = new SqlConnection(Program.strconn);
                 con.Open();
-                SqlCommand cmd1 = new SqlCommand("update tb_KhachHang set TenKhachHang = '" + txtTenKhachhang.Text + "',NgaySinh = '" + dtpNgaySinh.Text + "', GioiTinh ='" + txtGioiTinh.Text + "', DiaChi = '" + txtDiaChi.Text + "', CMND = '" + txtCMND.Text + "', DienThoai = '" + txtDienThoai.Text + "' where MaKhachHang = '" + txtMaKhachHang.Text + "'", con);
+                SqlCommand cmd1 = new SqlCommand("update tb_KhachHang set TenKhachHang = '" + txtTenKhachhang.Text + "',NgaySinh = '" + dtpNgaySinh.Text + "', GioiTinh ='" + gt + "', DiaChi = '" + txtDiaChi.Text + "', CMND = '" + txtCMND.Text + "', DienThoai = '" + txtDienThoai.Text + "' where MaKhachHang = '" + txtMaKhachHang.Text + "'", con);
                 cmd1.ExecuteNonQuery();
                 con.Close();
-                SqlDataAdapter da = new SqlDataAdapter("select MaKhachHang as [Mã khách hàng], TenKhachHang as [Tên khách hàng], NgaySinh as [Ngày sinh], GioiTinh as [Giới tính], DiaChi as [ Địa chỉ], DienThoai as [Điện thoại], CMND from tb_KhachHang ", con);
-                DataTable dt = new DataTable();
-                dt.Clear();
-                da.Fill(dt);
-                dtgThemKhachHang.DataSource = dt;
-                con.Close();
-                da.Dispose();
+                dtgThemKhachHang.DataSource = DS_KH();
                 MessageBox.Show("Sửa khách hàng thành công", "Quản lý khách hàng", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch

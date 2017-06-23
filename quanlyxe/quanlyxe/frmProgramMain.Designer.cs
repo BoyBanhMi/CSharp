@@ -34,12 +34,13 @@
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnLogOut = new System.Windows.Forms.Button();
-            this.btnABout = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.pnProMain = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btn_baocao = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,7 +48,7 @@
             // 
             this.btnQLTT.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnQLTT.Font = new System.Drawing.Font("Maiandra GD", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQLTT.Location = new System.Drawing.Point(27, 33);
+            this.btnQLTT.Location = new System.Drawing.Point(62, 33);
             this.btnQLTT.Name = "btnQLTT";
             this.btnQLTT.Size = new System.Drawing.Size(137, 32);
             this.btnQLTT.TabIndex = 0;
@@ -59,7 +60,7 @@
             // 
             this.btnLapHD.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnLapHD.Font = new System.Drawing.Font("Maiandra GD", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLapHD.Location = new System.Drawing.Point(202, 32);
+            this.btnLapHD.Location = new System.Drawing.Point(205, 32);
             this.btnLapHD.Name = "btnLapHD";
             this.btnLapHD.Size = new System.Drawing.Size(137, 33);
             this.btnLapHD.TabIndex = 0;
@@ -71,7 +72,7 @@
             // 
             this.btnThanhToanHD.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnThanhToanHD.Font = new System.Drawing.Font("Maiandra GD", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThanhToanHD.Location = new System.Drawing.Point(369, 33);
+            this.btnThanhToanHD.Location = new System.Drawing.Point(346, 33);
             this.btnThanhToanHD.Name = "btnThanhToanHD";
             this.btnThanhToanHD.Size = new System.Drawing.Size(137, 32);
             this.btnThanhToanHD.TabIndex = 0;
@@ -83,7 +84,7 @@
             // 
             this.btnTimKiem.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnTimKiem.Font = new System.Drawing.Font("Maiandra GD", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimKiem.Location = new System.Drawing.Point(544, 32);
+            this.btnTimKiem.Location = new System.Drawing.Point(488, 33);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(137, 32);
             this.btnTimKiem.TabIndex = 0;
@@ -95,11 +96,11 @@
             // 
             this.btnExit.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnExit.Font = new System.Drawing.Font("Maiandra GD", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(913, 33);
+            this.btnExit.Location = new System.Drawing.Point(917, 33);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(137, 32);
             this.btnExit.TabIndex = 0;
-            this.btnExit.Text = "Exit";
+            this.btnExit.Text = "Thoát";
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
@@ -107,25 +108,13 @@
             // 
             this.btnLogOut.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnLogOut.Font = new System.Drawing.Font("Maiandra GD", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogOut.Location = new System.Drawing.Point(722, 33);
+            this.btnLogOut.Location = new System.Drawing.Point(631, 33);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(137, 32);
             this.btnLogOut.TabIndex = 0;
             this.btnLogOut.Text = "Đăng Ký TK";
             this.btnLogOut.UseVisualStyleBackColor = false;
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
-            // 
-            // btnABout
-            // 
-            this.btnABout.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnABout.Font = new System.Drawing.Font("Maiandra GD", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnABout.Location = new System.Drawing.Point(1097, 33);
-            this.btnABout.Name = "btnABout";
-            this.btnABout.Size = new System.Drawing.Size(137, 32);
-            this.btnABout.TabIndex = 0;
-            this.btnABout.Text = "About";
-            this.btnABout.UseVisualStyleBackColor = false;
-            this.btnABout.Click += new System.EventHandler(this.btnABout_Click);
             // 
             // button10
             // 
@@ -148,9 +137,9 @@
             // pnProMain
             // 
             this.pnProMain.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.pnProMain.Location = new System.Drawing.Point(7, 71);
+            this.pnProMain.Location = new System.Drawing.Point(2, 71);
             this.pnProMain.Name = "pnProMain";
-            this.pnProMain.Size = new System.Drawing.Size(1250, 660);
+            this.pnProMain.Size = new System.Drawing.Size(1257, 660);
             this.pnProMain.TabIndex = 3;
             // 
             // label10
@@ -174,6 +163,30 @@
             this.panel2.Size = new System.Drawing.Size(1283, 21);
             this.panel2.TabIndex = 4;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button1.Font = new System.Drawing.Font("Maiandra GD", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(1060, 33);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(137, 32);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Thông Tin";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.btnABout_Click);
+            // 
+            // btn_baocao
+            // 
+            this.btn_baocao.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_baocao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_baocao.Location = new System.Drawing.Point(774, 34);
+            this.btn_baocao.Name = "btn_baocao";
+            this.btn_baocao.Size = new System.Drawing.Size(136, 31);
+            this.btn_baocao.TabIndex = 5;
+            this.btn_baocao.Text = "Báo Cáo";
+            this.btn_baocao.UseVisualStyleBackColor = false;
+            this.btn_baocao.Click += new System.EventHandler(this.btn_baocao_Click);
+            // 
             // frmProgramMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -181,14 +194,15 @@
             this.BackColor = System.Drawing.Color.Navy;
             this.ClientSize = new System.Drawing.Size(1261, 733);
             this.ControlBox = false;
+            this.Controls.Add(this.btn_baocao);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnProMain);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.button10);
-            this.Controls.Add(this.btnABout);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.btnLogOut);
-            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnLapHD);
             this.Controls.Add(this.btnThanhToanHD);
             this.Controls.Add(this.btnQLTT);
@@ -212,11 +226,12 @@
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnLogOut;
-        private System.Windows.Forms.Button btnABout;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Panel pnProMain;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_baocao;
     }
 }

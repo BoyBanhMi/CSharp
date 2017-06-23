@@ -29,19 +29,19 @@ namespace quanlyxe
             {
                 SqlConnection conn = new SqlConnection(Program.strconn);
                 conn.Open();
-                SqlDataAdapter da = new SqlDataAdapter("select MaNhanVien as [Mã Nhân Viên], TenNhanVien as [Tên Nhân Viên], NgaySinh as [Ngày Sinh], GioiTinh as [Giới Tính], DiaChi as [Địa Chỉ], CMND as [Số CMND], DienThoai as [Số Điện Thoại], Email as [Email] from tb_NhanVirn where MaNhanVien like '%" + txtTimKiemKH.Text + "%'", conn);
+                SqlDataAdapter da = new SqlDataAdapter("select MaNhanVien as [Mã Nhân Viên], TenNhanVien as [Tên Nhân Viên], NgaySinh as [Ngày Sinh], GioiTinh as [Giới Tính], DiaChi as [Địa Chỉ], CMND as [Số CMND], DienThoai as [Số Điện Thoại], Email as [Email] from tb_NhanVien where MaNhanVien like '%" + txtTimKiemKH.Text + "%'", conn);
                 DataSet ds = new DataSet();
-                da.Fill(ds, "tb_NhanVirn");
-                dgvTimKiemKH.DataSource = ds.Tables["tb_NhanVirn"].DefaultView;
+                da.Fill(ds, "tb_NhanVien");
+                dgvTimKiemKH.DataSource = ds.Tables["tb_NhanVien"].DefaultView;
             }
             if (rbTimKiemTheoTenNV.Checked == true)
             {
                 SqlConnection conn = new SqlConnection(Program.strconn);
                 conn.Open();
-                SqlDataAdapter da = new SqlDataAdapter("select MaNhanVien as [Mã Nhân Viên], TenNhanVien as [Tên Nhân Viên], NgaySinh as [Ngày Sinh], GioiTinh as [Giới Tính], DiaChi as [Địa Chỉ], CMND as [Số CMND], DienThoai as [Số Điện Thoại], Email as [Email] from tb_NhanVirn where tenNhanVien like '%" + txtTimKiemKH.Text + "%'", conn);
+                SqlDataAdapter da = new SqlDataAdapter("select MaNhanVien as [Mã Nhân Viên], TenNhanVien as [Tên Nhân Viên], NgaySinh as [Ngày Sinh], GioiTinh as [Giới Tính], DiaChi as [Địa Chỉ], CMND as [Số CMND], DienThoai as [Số Điện Thoại], Email as [Email] from tb_NhanVien where tenNhanVien like '%" + txtTimKiemKH.Text + "%'", conn);
                 DataSet ds = new DataSet();
-                da.Fill(ds, "tb_NhanVirn");
-                dgvTimKiemKH.DataSource = ds.Tables["tb_NhanVirn"].DefaultView;
+                da.Fill(ds, "tb_NhanVien");
+                dgvTimKiemKH.DataSource = ds.Tables["tb_NhanVien"].DefaultView;
             }
             if (rbcmnd.Checked == true)
             {
@@ -49,8 +49,8 @@ namespace quanlyxe
                 conn.Open();
                 SqlDataAdapter da = new SqlDataAdapter("select MaNhanVien as [Mã Nhân Viên], TenNhanVien as [Tên Nhân Viên], NgaySinh as [Ngày Sinh], GioiTinh as [Giới Tính], DiaChi as [Địa Chỉ], CMND as [Số CMND], DienThoai as [Số Điện Thoại], Email as [Email] from tb_LaiXe where CMND like '%" + txtTimKiemKH.Text + "%'", conn);
                 DataSet ds = new DataSet();
-                da.Fill(ds, "tb_NhanVirn");
-                dgvTimKiemKH.DataSource = ds.Tables["tb_NhanVirn"].DefaultView;
+                da.Fill(ds, "tb_NhanVien");
+                dgvTimKiemKH.DataSource = ds.Tables["tb_NhanVien"].DefaultView;
             }
             if (rbdt.Checked == true)
             {
@@ -58,8 +58,8 @@ namespace quanlyxe
                 conn.Open();
                 SqlDataAdapter da = new SqlDataAdapter("select MaNhanVien as [Mã Nhân Viên], TenNhanVien as [Tên Nhân Viên], NgaySinh as [Ngày Sinh], GioiTinh as [Giới Tính], DiaChi as [Địa Chỉ], CMND as [Số CMND], DienThoai as [Số Điện Thoại], Email as [Email] from tb_LaiXe where DienThoai like '%" + txtTimKiemKH.Text + "%'", conn);
                 DataSet ds = new DataSet();
-                da.Fill(ds, "tb_NhanVirn");
-                dgvTimKiemKH.DataSource = ds.Tables["tb_NhanVirn"].DefaultView;
+                da.Fill(ds, "tb_NhanVien");
+                dgvTimKiemKH.DataSource = ds.Tables["tb_NhanVien"].DefaultView;
             }
         }
     }

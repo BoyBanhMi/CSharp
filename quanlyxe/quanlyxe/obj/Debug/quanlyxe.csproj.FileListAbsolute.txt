@@ -26,5 +26,12 @@ E:\do an\demo\quanlyxe\quanlyxe\obj\Debug\quanlyxe.frmtimKH.resources
 E:\do an\demo\quanlyxe\quanlyxe\obj\Debug\quanlyxe.frmtimhopdong.resources
 E:\do an\demo\quanlyxe\quanlyxe\obj\Debug\quanlyxe.frmtimlaixe.resources
 E:\do an\demo\quanlyxe\quanlyxe\obj\Debug\quanlyxe.frmtimnhanvien.resources
-E:\do an\demo\quanlyxe\quanlyxe\obj\Debug\quanlyxe.frmTaoHopDong.resources
 E:\do an\demo\quanlyxe\quanlyxe\obj\Debug\quanlyxe.frm_TraTien.resources
+E:\do an\demo\quanlyxe\quanlyxe\obj\Debug\quanlyxe.frmBaoCao.resources
+E:\do an\demo\quanlyxe\quanlyxe\obj\Debug\quanlyxe.frmBC_HopDong.resources
+E:\do an\demo\quanlyxe\quanlyxe\obj\Debug\RdlCompile.cache
+E:\do an\demo\quanlyxe\quanlyxe\obj\Debug\RdlCompile.compiled
+E:\do an\demo\quanlyxe\quanlyxe\obj\Debug\quanlyxe.frmBC_LaiXe.resources
+E:\do an\demo\quanlyxe\quanlyxe\obj\Debug\quanlyxe.frmBC_KH.resources
+E:\do an\demo\quanlyxe\quanlyxe\obj\Debug\quanlyxe.frmBC_NhanVien.resources
+E:\do an\demo\quanlyxe\quanlyxe\obj\Debug\quanlyxe.frmBC_Xe.resources

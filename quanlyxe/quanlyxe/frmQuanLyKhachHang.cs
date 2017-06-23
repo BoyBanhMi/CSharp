@@ -24,12 +24,20 @@ namespace quanlyxe
         {
              try
                 {
+                    int gt = 1;
+                    if (radNam.Checked)
+                    {
+                        gt = 1;
+                    }
+                    else {
+                        gt = 0;
+                    }
 
                     SqlConnection con = new SqlConnection(Program.strconn);
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("insert into tb_KhachHang (MaKhachHang, TenKhachHang, NgaySinh, GioiTinh, DiaChi, CMND, DienThoai, Email, BangCap, TinhTrangKH) values ('" + Ma.Text + "', '" + Ten.Text + "', '" + NgaySinh.Text + "', '" + GioiTinh.Text + "', '" + DiaChi.Text + "', '" + CMND.Text + "', '" + DienThoai.Text + "', '" + Email.Text + "')", con);
+                    SqlCommand cmd = new SqlCommand("insert into tb_KhachHang  values ('" + Ma.Text + "','"+txtHoKH.Text+"' ,'" + Ten.Text + "', '" + NgaySinh.Text + "', '" + gt + "', '" + DiaChi.Text + "', '" + CMND.Text + "', '" + DienThoai.Text + "', '" + Email.Text + "')", con);
                     cmd.ExecuteNonQuery();
-                    SqlDataAdapter da = new SqlDataAdapter("select MaKhachHang as [Mã khách hàng], TenKhachHang as [Tên khách hàng], NgaySinh as [Ngày sinh], GioiTinh as [Giới tính], DiaChi as [ Địa chỉ], DienThoai as [Điện thoại], CMND, Email, BangCap as [Bằng cấp] from tb_KhachHang ", con);
+                    SqlDataAdapter da = new SqlDataAdapter("select row_number() over (order by MaKhachHang) as STT, MaKhachHang as [Mã khách hàng], TenKhachHang as [Tên khách hàng], NgaySinh as [Ngày sinh], GioiTinh as [Giới tính], DiaChi as [ Địa chỉ], DienThoai as [Điện thoại], CMND, Email from tb_KhachHang ", con);
                     DataTable dt = new DataTable();
                     dt.Clear();
                     da.Fill(dt);
@@ -65,8 +73,8 @@ namespace quanlyxe
             Load_MaKH();
             SqlConnection con = new SqlConnection(Program.strconn);
             con.Open();
-            
-            SqlDataAdapter da = new SqlDataAdapter("select MaKhachHang as [Mã khách hàng], TenKhachHang as [Tên khách hàng], NgaySinh as [Ngày sinh], GioiTinh as [Giới tính], DiaChi as [ Địa chỉ], DienThoai as [Điện thoại], CMND, Email, BangCap as [Bằng cấp] from tb_KhachHang ", con);
+
+            SqlDataAdapter da = new SqlDataAdapter("select row_number() over (order by MaKhachHang) as STT, MaKhachHang as [Mã khách hàng], TenKhachHang as [Tên khách hàng], NgaySinh as [Ngày sinh], GioiTinh as [Giới tính], DiaChi as [ Địa chỉ], DienThoai as [Điện thoại], CMND, Email from tb_KhachHang ", con);
             DataTable dt = new DataTable();
             dt.Clear();
             da.Fill(dt);
@@ -80,11 +88,21 @@ namespace quanlyxe
         {
             try
             {
+                int gt = 1;
+                if (radNam.Checked)
+                {
+                    gt = 1;
+                }
+                else
+                {
+                    gt = 0;
+                }
+
                 SqlConnection con = new SqlConnection(Program.strconn);
                 con.Open();
-                SqlCommand cmd = new SqlCommand("update  tb_KhachHang set TenKhachHang = '" + Ten.Text + "', NgaySinh = '" + NgaySinh.Text + "', GioiTinh = '" + GioiTinh.Text + "', DiaChi = '" + DiaChi.Text + "', CMND = '" + CMND.Text + "', DienThoai = '" + DienThoai.Text + "', Email = '" + Email.Text + "' where MaKhachHang = '" + Ma.Text + "' ", con);
+                SqlCommand cmd = new SqlCommand("update  tb_KhachHang set TenKhachHang = '" + Ten.Text + "', NgaySinh = '" + NgaySinh.Text + "', GioiTinh = '" + gt + "', DiaChi = '" + DiaChi.Text + "', CMND = '" + CMND.Text + "', DienThoai = '" + DienThoai.Text + "', Email = '" + Email.Text + "' where MaKhachHang = '" + Ma.Text + "' ", con);
                 cmd.ExecuteNonQuery();
-                SqlDataAdapter da = new SqlDataAdapter("select MaKhachHang as [Mã khách hàng], TenKhachHang as [Tên khách hàng], NgaySinh as [Ngày sinh], GioiTinh as [Giới tính], DiaChi as [ Địa chỉ], DienThoai as [Điện thoại], CMND, Email, BangCap as [Bằng cấp] from tb_KhachHang ", con);
+                SqlDataAdapter da = new SqlDataAdapter("select row_number() over (order by MaKhachHang) as STT, MaKhachHang as [Mã khách hàng], TenKhachHang as [Tên khách hàng], NgaySinh as [Ngày sinh], GioiTinh as [Giới tính], DiaChi as [ Địa chỉ], DienThoai as [Điện thoại], CMND, Email from tb_KhachHang ", con);
                 DataTable dt = new DataTable();
                 dt.Clear();
                 da.Fill(dt);
@@ -104,7 +122,7 @@ namespace quanlyxe
         {
             SqlConnection con = new SqlConnection(Program.strconn);
             con.Open();
-            SqlDataAdapter da = new SqlDataAdapter("select MaKhachHang as [Mã khách hàng], TenKhachHang as [Tên khách hàng], NgaySinh as [Ngày sinh], GioiTinh as [Giới tính], DiaChi as [ Địa chỉ], DienThoai as [Điện thoại], CMND, Email, BangCap as [Bằng cấp] from tb_KhachHang ", con);
+            SqlDataAdapter da = new SqlDataAdapter("select row_number() over (order by MaKhachHang) as STT, MaKhachHang as [Mã khách hàng], TenKhachHang as [Tên khách hàng], NgaySinh as [Ngày sinh], GioiTinh as [Giới tính], DiaChi as [ Địa chỉ], DienThoai as [Điện thoại], CMND, Email from tb_KhachHang ", con);
             DataSet dt = new DataSet();
             da.Fill(dt, "tb_KhachHang");
             dataGridView1.DataSource = dt.Tables["tb_KhachHang"].DefaultView;
@@ -118,7 +136,7 @@ namespace quanlyxe
             con.Open();
 
 
-            SqlDataAdapter da = new SqlDataAdapter("select MaKhachHang as [Mã khách hàng], TenKhachHang as [Tên khách hàng], NgaySinh as [Ngày sinh], GioiTinh as [Giới tính], DiaChi as [Địa chỉ], DienThoai as [Điện thoại], CMND, Email, BangCap as [Bằng cấp] from tb_KhachHang where MaKhachHang = '" + Ma.Text + "' ", con);
+            SqlDataAdapter da = new SqlDataAdapter("select row_number() over (order by MaKhachHang) as STT, MaKhachHang as [Mã khách hàng], TenKhachHang as [Tên khách hàng], NgaySinh as [Ngày sinh], GioiTinh as [Giới tính], DiaChi as [ Địa chỉ], DienThoai as [Điện thoại], CMND, Email from tb_KhachHang where MaKhachHang like '%" + Ma.Text + "%' ", con);
             DataTable dt = new DataTable();
             dt.Clear();
             da.Fill(dt);
@@ -133,27 +151,14 @@ namespace quanlyxe
             {
                 SqlConnection con = new SqlConnection(Program.strconn);
                 con.Open();
-                SqlCommand cmd = new SqlCommand("delete tb_HopDong where MaKhachHang = '" + Ma.Text + "' ", con);
-                cmd.ExecuteNonQuery();
-                con.Close();
-
-                //con.Open();
-                //SqlCommand cmd1 = new SqlCommand("delete tb_LyLuatKhachHang where MaKhachHang = '" + Ma.Text + "' ", con);
-                //cmd1.ExecuteNonQuery();
-                //con.Close();
 
                 con.Open();
-                SqlCommand cmd3 = new SqlCommand("delete tb_PhieuTra where MaKhachHang = '" + Ma.Text + "' ", con);
-                cmd3.ExecuteNonQuery();
-                con.Close();
-
-                con.Open();
-                SqlCommand cmd2 = new SqlCommand("delete tb_KhachHang where MaKhachHang = '" + Ma.Text + "'", con);
+                SqlCommand cmd2 = new SqlCommand("delete from tb_KhachHang where MaKhachHang = '" + Ma.Text + "'", con);
                 cmd2.ExecuteNonQuery();
                 con.Close();
 
                 con.Open();
-                SqlDataAdapter da = new SqlDataAdapter("select MaKhachHang as [Mã khách hàng], TenKhachHang as [Tên khách hàng], NgaySinh as [Ngày sinh], GioiTinh as [Giới tính], DiaChi as [ Địa chỉ], DienThoai as [Điện thoại], CMND, Email, BangCap as [Bằng cấp] from tb_KhachHang ", con);
+                SqlDataAdapter da = new SqlDataAdapter("select row_number() over (order by MaKhachHang) as STT, MaKhachHang as [Mã khách hàng], TenKhachHang as [Tên khách hàng], NgaySinh as [Ngày sinh], GioiTinh as [Giới tính], DiaChi as [ Địa chỉ], DienThoai as [Điện thoại], CMND, Email from tb_KhachHang ", con);
                 DataTable dt = new DataTable();
                 dt.Clear();
                 da.Fill(dt);

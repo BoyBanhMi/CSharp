@@ -39,6 +39,24 @@ namespace quanlyxe
                 MessageBox.Show("Thêm Hợp Đồng Thất bại ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        public void themHDKLX(string mahd, string tenhd, string ngaylap, string manv, string makh, string ngaythanhtoan, int x, string maxe, string magia, string tiencoc)
+        {
+            try
+            {
+                SqlConnection con = new SqlConnection(Program.strconn);
+                con.Open();
+                string cmd = "INSERT INTO tb_HopDong VALUES(N'" + mahd + "',N'" + tenhd + "','" + ngaylap + "',N'" + manv + "',N'" + makh + "','" + ngaythanhtoan + "','" + x + "','" + maxe + "','" + magia + "','0','" + tiencoc + "')";
+                SqlCommand sqlCmd = new SqlCommand(cmd, con);
+                sqlCmd.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("Thêm Hợp Đồng thành công", "Lập Hợp Đồng", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch
+            {
+                MessageBox.Show("Thêm Hợp Đồng Thất bại ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
         void suaHD(string mahd, string tenhd, string ngaylap, string manv, string makh, string ngaythanhtoan, int x, string maxe, string magia, string malaixe)
         {
             try
@@ -75,7 +93,7 @@ namespace quanlyxe
         }
         DataTable DS_NV()
         {
-            string cmd = "SELECT * FROM tb_NhanVirn";
+            string cmd = "SELECT * FROM tb_NhanVien";
             SqlDataAdapter adap = new SqlDataAdapter(cmd, Program.strconn);
             DataTable ds = new DataTable();
             adap.Fill(ds);
@@ -98,8 +116,16 @@ namespace quanlyxe
         {
             try
             {
-                themHD(cbbMaHD.Text, txtTenHD.Text, dtpNgayLap.Text, cbbMaNV.SelectedValue.ToString(), cbbMaKH.SelectedValue.ToString(), dtpHannThanhToan.Text, 0, cbb_chonxe.SelectedValue.ToString(), cbb_gia.SelectedValue.ToString(), cbb_chonLX.SelectedValue.ToString(), txt_tiencoc.Text);
-                dataGridViewlapHD.DataSource = ds_HD();
+                if (rb_coTX.Checked == true)
+                {
+                    themHD(cbbMaHD.Text, txtTenHD.Text, dtpNgayLap.Text, cbbMaNV.SelectedValue.ToString(), cbbMaKH.SelectedValue.ToString(), dtpHannThanhToan.Text, 0, cbb_chonxe.SelectedValue.ToString(), cbb_gia.SelectedValue.ToString(), cbb_chonLX.SelectedValue.ToString(), txt_tiencoc.Text);
+                    dataGridViewlapHD.DataSource = ds_HD();
+                }
+                else
+                {
+                    themHDKLX(cbbMaHD.Text, txtTenHD.Text, dtpNgayLap.Text, cbbMaNV.SelectedValue.ToString(), cbbMaKH.SelectedValue.ToString(), dtpHannThanhToan.Text, 0, cbb_chonxe.SelectedValue.ToString(), cbb_gia.SelectedValue.ToString(), txt_tiencoc.Text);
+                    dataGridViewlapHD.DataSource = ds_HD();
+                }
             }
             catch
             {

@@ -49,7 +49,6 @@
             this.NgaySinh = new System.Windows.Forms.DateTimePicker();
             this.btnsua = new System.Windows.Forms.Button();
             this.Ma = new System.Windows.Forms.ComboBox();
-            this.GioiTinh = new System.Windows.Forms.ComboBox();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnTim = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
@@ -57,6 +56,11 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label15 = new System.Windows.Forms.Label();
+            this.radNam = new System.Windows.Forms.RadioButton();
+            this.radNu = new System.Windows.Forms.RadioButton();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtHoKH = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -99,7 +103,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(360, 67);
+            this.textBox2.Location = new System.Drawing.Point(360, 119);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(130, 22);
@@ -110,7 +114,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label2.ForeColor = System.Drawing.Color.Blue;
-            this.label2.Location = new System.Drawing.Point(231, 67);
+            this.label2.Location = new System.Drawing.Point(231, 119);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(97, 16);
             this.label2.TabIndex = 3;
@@ -131,7 +135,7 @@
             // 
             // Ten
             // 
-            this.Ten.Location = new System.Drawing.Point(360, 67);
+            this.Ten.Location = new System.Drawing.Point(360, 119);
             this.Ten.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Ten.Name = "Ten";
             this.Ten.Size = new System.Drawing.Size(130, 22);
@@ -139,7 +143,7 @@
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(360, 125);
+            this.textBox5.Location = new System.Drawing.Point(633, 19);
             this.textBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(130, 22);
@@ -147,7 +151,7 @@
             // 
             // DiaChi
             // 
-            this.DiaChi.Location = new System.Drawing.Point(360, 125);
+            this.DiaChi.Location = new System.Drawing.Point(633, 19);
             this.DiaChi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DiaChi.Name = "DiaChi";
             this.DiaChi.Size = new System.Drawing.Size(130, 22);
@@ -158,7 +162,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label3.ForeColor = System.Drawing.Color.Blue;
-            this.label3.Location = new System.Drawing.Point(271, 97);
+            this.label3.Location = new System.Drawing.Point(271, 157);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 16);
             this.label3.TabIndex = 3;
@@ -169,7 +173,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label4.ForeColor = System.Drawing.Color.Blue;
-            this.label4.Location = new System.Drawing.Point(280, 125);
+            this.label4.Location = new System.Drawing.Point(553, 19);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(48, 16);
             this.label4.TabIndex = 3;
@@ -177,7 +181,7 @@
             // 
             // CMND
             // 
-            this.CMND.Location = new System.Drawing.Point(632, 39);
+            this.CMND.Location = new System.Drawing.Point(632, 81);
             this.CMND.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CMND.Name = "CMND";
             this.CMND.Size = new System.Drawing.Size(131, 22);
@@ -185,7 +189,7 @@
             // 
             // Email
             // 
-            this.Email.Location = new System.Drawing.Point(632, 113);
+            this.Email.Location = new System.Drawing.Point(632, 155);
             this.Email.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Email.Name = "Email";
             this.Email.Size = new System.Drawing.Size(131, 22);
@@ -193,7 +197,7 @@
             // 
             // DienThoai
             // 
-            this.DienThoai.Location = new System.Drawing.Point(632, 77);
+            this.DienThoai.Location = new System.Drawing.Point(632, 119);
             this.DienThoai.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DienThoai.Name = "DienThoai";
             this.DienThoai.Size = new System.Drawing.Size(131, 22);
@@ -204,7 +208,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label5.ForeColor = System.Drawing.Color.Blue;
-            this.label5.Location = new System.Drawing.Point(553, 42);
+            this.label5.Location = new System.Drawing.Point(553, 84);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(47, 16);
             this.label5.TabIndex = 3;
@@ -215,7 +219,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label6.ForeColor = System.Drawing.Color.Blue;
-            this.label6.Location = new System.Drawing.Point(558, 119);
+            this.label6.Location = new System.Drawing.Point(558, 161);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(42, 16);
             this.label6.TabIndex = 3;
@@ -226,7 +230,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label7.ForeColor = System.Drawing.Color.Blue;
-            this.label7.Location = new System.Drawing.Point(534, 83);
+            this.label7.Location = new System.Drawing.Point(534, 125);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(66, 16);
             this.label7.TabIndex = 3;
@@ -237,7 +241,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label9.ForeColor = System.Drawing.Color.Blue;
-            this.label9.Location = new System.Drawing.Point(265, 156);
+            this.label9.Location = new System.Drawing.Point(538, 50);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(63, 16);
             this.label9.TabIndex = 3;
@@ -246,7 +250,7 @@
             // NgaySinh
             // 
             this.NgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.NgaySinh.Location = new System.Drawing.Point(360, 154);
+            this.NgaySinh.Location = new System.Drawing.Point(633, 48);
             this.NgaySinh.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.NgaySinh.Name = "NgaySinh";
             this.NgaySinh.Size = new System.Drawing.Size(130, 22);
@@ -274,19 +278,6 @@
             this.Ma.Size = new System.Drawing.Size(130, 24);
             this.Ma.TabIndex = 6;
             // 
-            // GioiTinh
-            // 
-            this.GioiTinh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.GioiTinh.FormattingEnabled = true;
-            this.GioiTinh.Items.AddRange(new object[] {
-            "Nam",
-            "Nu"});
-            this.GioiTinh.Location = new System.Drawing.Point(360, 95);
-            this.GioiTinh.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.GioiTinh.Name = "GioiTinh";
-            this.GioiTinh.Size = new System.Drawing.Size(130, 24);
-            this.GioiTinh.TabIndex = 6;
-            // 
             // btnRefresh
             // 
             this.btnRefresh.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -296,7 +287,7 @@
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(68, 40);
             this.btnRefresh.TabIndex = 7;
-            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.Text = "Tải Lại";
             this.btnRefresh.UseVisualStyleBackColor = false;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
@@ -329,13 +320,15 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.groupBox1.Controls.Add(this.radNu);
+            this.groupBox1.Controls.Add(this.radNam);
             this.groupBox1.Controls.Add(this.pictureBox1);
-            this.groupBox1.Controls.Add(this.GioiTinh);
             this.groupBox1.Controls.Add(this.Ma);
             this.groupBox1.Controls.Add(this.NgaySinh);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label3);
@@ -345,11 +338,13 @@
             this.groupBox1.Controls.Add(this.DienThoai);
             this.groupBox1.Controls.Add(this.textBox5);
             this.groupBox1.Controls.Add(this.Email);
+            this.groupBox1.Controls.Add(this.txtHoKH);
             this.groupBox1.Controls.Add(this.Ten);
+            this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.CMND);
             this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.ForeColor = System.Drawing.Color.Blue;
-            this.groupBox1.Location = new System.Drawing.Point(6, 7);
+            this.groupBox1.Location = new System.Drawing.Point(6, 10);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(778, 213);
             this.groupBox1.TabIndex = 11;
@@ -389,6 +384,55 @@
             this.label15.Size = new System.Drawing.Size(480, 31);
             this.label15.TabIndex = 3;
             this.label15.Text = "QUẢN LÝ THÔNG TIN KHÁCH HÀNG";
+            // 
+            // radNam
+            // 
+            this.radNam.AutoSize = true;
+            this.radNam.Location = new System.Drawing.Point(360, 157);
+            this.radNam.Name = "radNam";
+            this.radNam.Size = new System.Drawing.Size(52, 20);
+            this.radNam.TabIndex = 8;
+            this.radNam.TabStop = true;
+            this.radNam.Text = "Nam";
+            this.radNam.UseVisualStyleBackColor = true;
+            // 
+            // radNu
+            // 
+            this.radNu.AutoSize = true;
+            this.radNu.Location = new System.Drawing.Point(447, 156);
+            this.radNu.Name = "radNu";
+            this.radNu.Size = new System.Drawing.Size(43, 20);
+            this.radNu.TabIndex = 8;
+            this.radNu.TabStop = true;
+            this.radNu.Text = "Nữ";
+            this.radNu.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(360, 78);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(130, 22);
+            this.textBox1.TabIndex = 1;
+            // 
+            // txtHoKH
+            // 
+            this.txtHoKH.Location = new System.Drawing.Point(360, 78);
+            this.txtHoKH.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtHoKH.Name = "txtHoKH";
+            this.txtHoKH.Size = new System.Drawing.Size(130, 22);
+            this.txtHoKH.TabIndex = 1;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label8.ForeColor = System.Drawing.Color.Blue;
+            this.label8.Location = new System.Drawing.Point(231, 78);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(93, 16);
+            this.label8.TabIndex = 3;
+            this.label8.Text = "Họ khách hàng";
             // 
             // frmQuanLyKhachHang
             // 
@@ -441,7 +485,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnsua;
         private System.Windows.Forms.ComboBox Ma;
-        private System.Windows.Forms.ComboBox GioiTinh;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Button btnTim;
         private System.Windows.Forms.Button btnXoa;
@@ -449,5 +492,10 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.RadioButton radNu;
+        private System.Windows.Forms.RadioButton radNam;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtHoKH;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
