@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cmdRefresh = new System.Windows.Forms.Button();
             this.txtMaLaiXe = new System.Windows.Forms.ComboBox();
             this.dgvQuanLyLaiXe = new System.Windows.Forms.DataGridView();
@@ -69,14 +69,14 @@
             // 
             // cmdRefresh
             // 
-            this.cmdRefresh.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.cmdRefresh.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.cmdRefresh.ForeColor = System.Drawing.Color.Blue;
             this.cmdRefresh.Location = new System.Drawing.Point(0, 17);
             this.cmdRefresh.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmdRefresh.Name = "cmdRefresh";
             this.cmdRefresh.Size = new System.Drawing.Size(59, 40);
             this.cmdRefresh.TabIndex = 0;
-            this.cmdRefresh.Text = "Refresh";
+            this.cmdRefresh.Text = "Tải Lại";
             this.cmdRefresh.UseVisualStyleBackColor = false;
             this.cmdRefresh.Click += new System.EventHandler(this.cmdRefresh_Click);
             // 
@@ -95,14 +95,14 @@
             this.dgvQuanLyLaiXe.AllowUserToDeleteRows = false;
             this.dgvQuanLyLaiXe.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgvQuanLyLaiXe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvQuanLyLaiXe.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvQuanLyLaiXe.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvQuanLyLaiXe.Location = new System.Drawing.Point(3, 8);
             this.dgvQuanLyLaiXe.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvQuanLyLaiXe.Name = "dgvQuanLyLaiXe";
@@ -339,7 +339,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.groupBox1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.txtDiaChi);
             this.groupBox1.Controls.Add(this.txtEmail);
@@ -429,7 +429,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Silver;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1090, 585);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);

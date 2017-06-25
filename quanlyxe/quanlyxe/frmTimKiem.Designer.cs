@@ -64,7 +64,7 @@
             // 
             // pnTimKiem
             // 
-            this.pnTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.pnTimKiem.BackColor = System.Drawing.Color.White;
             this.pnTimKiem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pnTimKiem.Location = new System.Drawing.Point(6, 49);
             this.pnTimKiem.Name = "pnTimKiem";
@@ -114,7 +114,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Blue;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(1250, 627);
             this.Controls.Add(this.cmdTimKiemHopDongPN);
             this.Controls.Add(this.cmdTimKiemLaiXePN);

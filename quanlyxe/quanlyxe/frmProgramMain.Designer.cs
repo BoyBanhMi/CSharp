@@ -136,7 +136,7 @@
             // 
             // pnProMain
             // 
-            this.pnProMain.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pnProMain.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.pnProMain.Location = new System.Drawing.Point(2, 71);
             this.pnProMain.Name = "pnProMain";
             this.pnProMain.Size = new System.Drawing.Size(1257, 660);
@@ -154,7 +154,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.label10);
             this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.ForeColor = System.Drawing.Color.DarkBlue;
@@ -191,7 +191,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Navy;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1261, 733);
             this.ControlBox = false;
             this.Controls.Add(this.btn_baocao);

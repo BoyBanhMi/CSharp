@@ -43,8 +43,10 @@ namespace quanlyxe
             {
                 SqlConnection conn = new SqlConnection(Program.strconn);
                 conn.Open();
-                SqlDataAdapter da = new SqlDataAdapter("select tb_HopDong.MaKhachHang as [Mã khách hàng], MahopDong as [Mã hợp đồng], TenHopDong as [Tên hợp đồng], NgayLapHopDong as [Ngày lập hợp đồng], MaNhanVien as [Mã nhân viên] , HanThanhToan as [Hạn thanh toán] ,TinhTrangThanhToan as [Tình trạng thanh toán] from tb_HopDong where MahopDong like '%" +txtinsert.Text+ "%'", conn);
-                dataGridView1.DataSource = DS_HD();
+                SqlDataAdapter da = new SqlDataAdapter("select tb_HopDong.MaKhachHang as [Mã khách hàng], MahopDong as [Mã hợp đồng], TenHopDong as [Tên hợp đồng], NgayLapHopDong as [Ngày lập hợp đồng], MaNhanVien as [Mã nhân viên] , HanThanhToan as [Hạn thanh toán] ,TinhTrangThanhToan as [Tình trạng thanh toán] from tb_HopDong where MaHopDong like '%" +txtinsert.Text+ "%'", conn);
+                DataTable ds = new DataTable();
+                da.Fill(ds);
+                dataGridView1.DataSource = ds;
 
             }
             catch(Exception ex){
@@ -76,8 +78,10 @@ namespace quanlyxe
         {
             SqlConnection conn = new SqlConnection(Program.strconn);
             conn.Open();
-            SqlDataAdapter da = new SqlDataAdapter("select tb_HopDong.MaKhachHang as [Mã khách hàng], MahopDong as [Mã hợp đồng], TenHopDong as [Tên hợp đồng], NgayLapHopDong as [Ngày lập hợp đồng], MaNhanVien as [Mã nhân viên] , HanThanhToan as [Hạn thanh toán] ,TinhTrangThanhToan as [Tình trạng thanh toán] from tb_HopDong where MahopDong like '%" + txtinsert.Text + "%'", conn);
-            dataGridView1.DataSource = DS_HD();
+            SqlDataAdapter da = new SqlDataAdapter("select tb_HopDong.MaKhachHang as [Mã khách hàng], MahopDong as [Mã hợp đồng], TenHopDong as [Tên hợp đồng], NgayLapHopDong as [Ngày lập hợp đồng], MaNhanVien as [Mã nhân viên] , HanThanhToan as [Hạn thanh toán] ,TinhTrangThanhToan as [Tình trạng thanh toán] from tb_HopDong where MaHopDong like '%" + txtinsert.Text + "%'", conn);
+            DataTable ds = new DataTable();
+            da.Fill(ds);
+            dataGridView1.DataSource = ds;
         }
     }
 }

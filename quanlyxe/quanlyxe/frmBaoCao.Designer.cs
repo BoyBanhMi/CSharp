@@ -43,7 +43,7 @@
             // 
             this.btn_HD.Location = new System.Drawing.Point(2, 3);
             this.btn_HD.Name = "btn_HD";
-            this.btn_HD.Size = new System.Drawing.Size(94, 30);
+            this.btn_HD.Size = new System.Drawing.Size(110, 35);
             this.btn_HD.TabIndex = 0;
             this.btn_HD.Text = "Hợp Đồng";
             this.btn_HD.UseVisualStyleBackColor = true;
@@ -51,9 +51,9 @@
             // 
             // btn_KH
             // 
-            this.btn_KH.Location = new System.Drawing.Point(2, 39);
+            this.btn_KH.Location = new System.Drawing.Point(2, 45);
             this.btn_KH.Name = "btn_KH";
-            this.btn_KH.Size = new System.Drawing.Size(94, 30);
+            this.btn_KH.Size = new System.Drawing.Size(110, 35);
             this.btn_KH.TabIndex = 0;
             this.btn_KH.Text = "Khách Hàng";
             this.btn_KH.UseVisualStyleBackColor = true;
@@ -61,9 +61,9 @@
             // 
             // btn_LX
             // 
-            this.btn_LX.Location = new System.Drawing.Point(2, 75);
+            this.btn_LX.Location = new System.Drawing.Point(2, 87);
             this.btn_LX.Name = "btn_LX";
-            this.btn_LX.Size = new System.Drawing.Size(94, 30);
+            this.btn_LX.Size = new System.Drawing.Size(110, 35);
             this.btn_LX.TabIndex = 0;
             this.btn_LX.Text = "Lái Xe";
             this.btn_LX.UseVisualStyleBackColor = true;
@@ -71,9 +71,9 @@
             // 
             // btn_NV
             // 
-            this.btn_NV.Location = new System.Drawing.Point(2, 111);
+            this.btn_NV.Location = new System.Drawing.Point(2, 128);
             this.btn_NV.Name = "btn_NV";
-            this.btn_NV.Size = new System.Drawing.Size(94, 30);
+            this.btn_NV.Size = new System.Drawing.Size(110, 35);
             this.btn_NV.TabIndex = 0;
             this.btn_NV.Text = "Nhân Viên";
             this.btn_NV.UseVisualStyleBackColor = true;
@@ -81,9 +81,9 @@
             // 
             // btn_Xe
             // 
-            this.btn_Xe.Location = new System.Drawing.Point(2, 147);
+            this.btn_Xe.Location = new System.Drawing.Point(2, 170);
             this.btn_Xe.Name = "btn_Xe";
-            this.btn_Xe.Size = new System.Drawing.Size(94, 30);
+            this.btn_Xe.Size = new System.Drawing.Size(110, 35);
             this.btn_Xe.TabIndex = 0;
             this.btn_Xe.Text = "Xe";
             this.btn_Xe.UseVisualStyleBackColor = true;
@@ -91,43 +91,44 @@
             // 
             // btn_ChiTiet
             // 
-            this.btn_ChiTiet.Location = new System.Drawing.Point(2, 233);
+            this.btn_ChiTiet.Location = new System.Drawing.Point(2, 269);
             this.btn_ChiTiet.Name = "btn_ChiTiet";
-            this.btn_ChiTiet.Size = new System.Drawing.Size(94, 47);
+            this.btn_ChiTiet.Size = new System.Drawing.Size(110, 54);
             this.btn_ChiTiet.TabIndex = 0;
             this.btn_ChiTiet.Text = "Chi Tiết Hợp Đồng";
             this.btn_ChiTiet.UseVisualStyleBackColor = true;
             // 
             // btn_ThanhToan
             // 
-            this.btn_ThanhToan.Location = new System.Drawing.Point(2, 183);
+            this.btn_ThanhToan.Location = new System.Drawing.Point(2, 211);
             this.btn_ThanhToan.Name = "btn_ThanhToan";
-            this.btn_ThanhToan.Size = new System.Drawing.Size(94, 44);
+            this.btn_ThanhToan.Size = new System.Drawing.Size(110, 51);
             this.btn_ThanhToan.TabIndex = 0;
             this.btn_ThanhToan.Text = "Phiếu Thanh Toán";
             this.btn_ThanhToan.UseVisualStyleBackColor = true;
             // 
             // pn_baocao
             // 
-            this.pn_baocao.Location = new System.Drawing.Point(117, 5);
+            this.pn_baocao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pn_baocao.Location = new System.Drawing.Point(136, 6);
             this.pn_baocao.Name = "pn_baocao";
-            this.pn_baocao.Size = new System.Drawing.Size(1138, 530);
+            this.pn_baocao.Size = new System.Drawing.Size(1328, 612);
             this.pn_baocao.TabIndex = 1;
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(101, 3);
+            this.button8.Location = new System.Drawing.Point(118, 3);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(10, 654);
+            this.button8.Size = new System.Drawing.Size(12, 755);
             this.button8.TabIndex = 2;
             this.button8.UseVisualStyleBackColor = true;
             // 
             // frmBaoCao
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(1257, 660);
+            this.ClientSize = new System.Drawing.Size(1378, 762);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.pn_baocao);
             this.Controls.Add(this.btn_NV);
@@ -137,6 +138,8 @@
             this.Controls.Add(this.btn_Xe);
             this.Controls.Add(this.btn_LX);
             this.Controls.Add(this.btn_HD);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.Color.Blue;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmBaoCao";
             this.Text = "Báo Cáo";

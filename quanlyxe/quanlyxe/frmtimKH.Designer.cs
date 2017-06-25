@@ -28,17 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btntimKH = new System.Windows.Forms.Button();
             this.dgvTimKiemKH = new System.Windows.Forms.DataGridView();
             this.grbTimXe = new System.Windows.Forms.GroupBox();
+            this.rbcmnd = new System.Windows.Forms.RadioButton();
             this.rbTimKiemMakh = new System.Windows.Forms.RadioButton();
+            this.rbdt = new System.Windows.Forms.RadioButton();
             this.rbTimKiemTheoTenkh = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtTimKiemKH = new System.Windows.Forms.TextBox();
-            this.rbdt = new System.Windows.Forms.RadioButton();
-            this.rbcmnd = new System.Windows.Forms.RadioButton();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTimKiemKH)).BeginInit();
@@ -65,14 +65,14 @@
             this.dgvTimKiemKH.AllowUserToDeleteRows = false;
             this.dgvTimKiemKH.BackgroundColor = System.Drawing.Color.White;
             this.dgvTimKiemKH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvTimKiemKH.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTimKiemKH.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvTimKiemKH.Location = new System.Drawing.Point(63, 3);
             this.dgvTimKiemKH.Name = "dgvTimKiemKH";
             this.dgvTimKiemKH.ReadOnly = true;
@@ -95,6 +95,17 @@
             this.grbTimXe.Text = "Tìm Kiếm Khách Hàng";
             this.grbTimXe.Enter += new System.EventHandler(this.grbTimXe_Enter);
             // 
+            // rbcmnd
+            // 
+            this.rbcmnd.AutoSize = true;
+            this.rbcmnd.Location = new System.Drawing.Point(450, 24);
+            this.rbcmnd.Name = "rbcmnd";
+            this.rbcmnd.Size = new System.Drawing.Size(194, 21);
+            this.rbcmnd.TabIndex = 5;
+            this.rbcmnd.TabStop = true;
+            this.rbcmnd.Text = "Tìm kiếm theo Số CMND";
+            this.rbcmnd.UseVisualStyleBackColor = true;
+            // 
             // rbTimKiemMakh
             // 
             this.rbTimKiemMakh.AutoSize = true;
@@ -105,6 +116,17 @@
             this.rbTimKiemMakh.TabStop = true;
             this.rbTimKiemMakh.Text = "Tìm kiếm theo mã KH";
             this.rbTimKiemMakh.UseVisualStyleBackColor = true;
+            // 
+            // rbdt
+            // 
+            this.rbdt.AutoSize = true;
+            this.rbdt.Location = new System.Drawing.Point(672, 24);
+            this.rbdt.Name = "rbdt";
+            this.rbdt.Size = new System.Drawing.Size(166, 21);
+            this.rbdt.TabIndex = 5;
+            this.rbdt.TabStop = true;
+            this.rbdt.Text = "Tìm kiếm theo số ĐT";
+            this.rbdt.UseVisualStyleBackColor = true;
             // 
             // rbTimKiemTheoTenkh
             // 
@@ -144,28 +166,6 @@
             this.txtTimKiemKH.Size = new System.Drawing.Size(381, 20);
             this.txtTimKiemKH.TabIndex = 6;
             // 
-            // rbdt
-            // 
-            this.rbdt.AutoSize = true;
-            this.rbdt.Location = new System.Drawing.Point(672, 24);
-            this.rbdt.Name = "rbdt";
-            this.rbdt.Size = new System.Drawing.Size(166, 21);
-            this.rbdt.TabIndex = 5;
-            this.rbdt.TabStop = true;
-            this.rbdt.Text = "Tìm kiếm theo số ĐT";
-            this.rbdt.UseVisualStyleBackColor = true;
-            // 
-            // rbcmnd
-            // 
-            this.rbcmnd.AutoSize = true;
-            this.rbcmnd.Location = new System.Drawing.Point(450, 24);
-            this.rbcmnd.Name = "rbcmnd";
-            this.rbcmnd.Size = new System.Drawing.Size(194, 21);
-            this.rbcmnd.TabIndex = 5;
-            this.rbcmnd.TabStop = true;
-            this.rbcmnd.Text = "Tìm kiếm theo Số CMND";
-            this.rbcmnd.UseVisualStyleBackColor = true;
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Location = new System.Drawing.Point(745, 87);
@@ -186,7 +186,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Green;
+            this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(980, 547);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);

@@ -69,7 +69,7 @@ namespace quanlyxe
         {
             if (quyentruycap == 2 || quyentruycap == 1)
             {
-                frmThanhToanHD tt = new frmThanhToanHD();
+                frm_TraTien tt = new frm_TraTien();
                 tt.TopLevel = false;
                 tt.Show();
                 pnProMain.Controls.Clear();

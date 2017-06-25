@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cmdRefresh = new System.Windows.Forms.Button();
             this.txtMaNhanVien = new System.Windows.Forms.ComboBox();
             this.dtgQuanLyNhanVien = new System.Windows.Forms.DataGridView();
@@ -56,11 +56,11 @@
             this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.dtpNgayVaoLam = new System.Windows.Forms.DateTimePicker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rad_Nu = new System.Windows.Forms.RadioButton();
+            this.rad_Nam = new System.Windows.Forms.RadioButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.rad_Nam = new System.Windows.Forms.RadioButton();
-            this.rad_Nu = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dtgQuanLyNhanVien)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -96,14 +96,14 @@
             this.dtgQuanLyNhanVien.AllowUserToDeleteRows = false;
             this.dtgQuanLyNhanVien.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dtgQuanLyNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgQuanLyNhanVien.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgQuanLyNhanVien.DefaultCellStyle = dataGridViewCellStyle1;
             this.dtgQuanLyNhanVien.Location = new System.Drawing.Point(7, 4);
             this.dtgQuanLyNhanVien.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtgQuanLyNhanVien.Name = "dtgQuanLyNhanVien";
@@ -356,7 +356,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.groupBox1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.groupBox1.Controls.Add(this.rad_Nu);
             this.groupBox1.Controls.Add(this.rad_Nam);
             this.groupBox1.Controls.Add(this.pictureBox1);
@@ -386,6 +386,28 @@
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Quản lý nhân viên";
+            // 
+            // rad_Nu
+            // 
+            this.rad_Nu.AutoSize = true;
+            this.rad_Nu.Location = new System.Drawing.Point(408, 108);
+            this.rad_Nu.Name = "rad_Nu";
+            this.rad_Nu.Size = new System.Drawing.Size(43, 20);
+            this.rad_Nu.TabIndex = 10;
+            this.rad_Nu.TabStop = true;
+            this.rad_Nu.Text = "Nữ";
+            this.rad_Nu.UseVisualStyleBackColor = true;
+            // 
+            // rad_Nam
+            // 
+            this.rad_Nam.AutoSize = true;
+            this.rad_Nam.Location = new System.Drawing.Point(325, 108);
+            this.rad_Nam.Name = "rad_Nam";
+            this.rad_Nam.Size = new System.Drawing.Size(52, 20);
+            this.rad_Nam.TabIndex = 10;
+            this.rad_Nam.TabStop = true;
+            this.rad_Nam.Text = "Nam";
+            this.rad_Nam.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
@@ -420,33 +442,11 @@
             this.label16.TabIndex = 4;
             this.label16.Text = "QUẢN LÝ THÔNG TIN NHÂN VIÊN";
             // 
-            // rad_Nam
-            // 
-            this.rad_Nam.AutoSize = true;
-            this.rad_Nam.Location = new System.Drawing.Point(325, 108);
-            this.rad_Nam.Name = "rad_Nam";
-            this.rad_Nam.Size = new System.Drawing.Size(52, 20);
-            this.rad_Nam.TabIndex = 10;
-            this.rad_Nam.TabStop = true;
-            this.rad_Nam.Text = "Nam";
-            this.rad_Nam.UseVisualStyleBackColor = true;
-            // 
-            // rad_Nu
-            // 
-            this.rad_Nu.AutoSize = true;
-            this.rad_Nu.Location = new System.Drawing.Point(408, 108);
-            this.rad_Nu.Name = "rad_Nu";
-            this.rad_Nu.Size = new System.Drawing.Size(43, 20);
-            this.rad_Nu.TabIndex = 10;
-            this.rad_Nu.TabStop = true;
-            this.rad_Nu.Text = "Nữ";
-            this.rad_Nu.UseVisualStyleBackColor = true;
-            // 
             // frmQuanLyNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1090, 585);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);

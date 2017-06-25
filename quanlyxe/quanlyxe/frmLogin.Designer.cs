@@ -60,6 +60,7 @@
             // 
             // btnlogin
             // 
+            this.btnlogin.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.btnlogin.Location = new System.Drawing.Point(387, 198);
             this.btnlogin.Name = "btnlogin";
             this.btnlogin.Size = new System.Drawing.Size(113, 27);

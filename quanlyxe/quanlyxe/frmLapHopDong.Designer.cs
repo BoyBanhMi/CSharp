@@ -45,24 +45,24 @@
             this.dtpHannThanhToan = new System.Windows.Forms.DateTimePicker();
             this.dtpNgayLap = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
+            this.txt_tiencoc = new System.Windows.Forms.TextBox();
             this.txtTenHD = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.lbl_LX = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txt_tiencoc = new System.Windows.Forms.TextBox();
             this.pnThemHopDong.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewlapHD)).BeginInit();
             this.SuspendLayout();
             // 
             // pnThemHopDong
             // 
-            this.pnThemHopDong.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pnThemHopDong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.pnThemHopDong.Controls.Add(this.rb_kTX);
             this.pnThemHopDong.Controls.Add(this.rb_coTX);
             this.pnThemHopDong.Controls.Add(this.cbbMaHD);
@@ -253,6 +253,13 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "Hạn Thanh Toán";
             // 
+            // txt_tiencoc
+            // 
+            this.txt_tiencoc.Location = new System.Drawing.Point(642, 73);
+            this.txt_tiencoc.Name = "txt_tiencoc";
+            this.txt_tiencoc.Size = new System.Drawing.Size(129, 22);
+            this.txt_tiencoc.TabIndex = 1;
+            // 
             // txtTenHD
             // 
             this.txtTenHD.Location = new System.Drawing.Point(121, 39);
@@ -277,6 +284,15 @@
             this.label8.Size = new System.Drawing.Size(29, 16);
             this.label8.TabIndex = 0;
             this.label8.Text = "Giá";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(547, 75);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(85, 16);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Tiền Đặt Cọc";
             // 
             // lbl_LX
             // 
@@ -332,27 +348,11 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã Hợp Đồng";
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(547, 75);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(85, 16);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Tiền Đặt Cọc";
-            // 
-            // txt_tiencoc
-            // 
-            this.txt_tiencoc.Location = new System.Drawing.Point(642, 73);
-            this.txt_tiencoc.Name = "txt_tiencoc";
-            this.txt_tiencoc.Size = new System.Drawing.Size(129, 22);
-            this.txt_tiencoc.TabIndex = 1;
-            // 
             // frmLapHopDong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Green;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(1250, 532);
             this.Controls.Add(this.pnThemHopDong);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

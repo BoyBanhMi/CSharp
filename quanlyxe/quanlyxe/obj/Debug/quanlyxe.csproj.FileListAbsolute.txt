@@ -9,7 +9,6 @@ E:\do an\demo\quanlyxe\quanlyxe\obj\Debug\quanlyxe.exe
 E:\do an\demo\quanlyxe\quanlyxe\obj\Debug\quanlyxe.pdb
 E:\do an\demo\quanlyxe\quanlyxe\obj\Debug\quanlyxe.frmProgramMain.resources
 E:\do an\demo\quanlyxe\quanlyxe\obj\Debug\quanlyxe.frmqlthongtin.resources
-E:\do an\demo\quanlyxe\quanlyxe\obj\Debug\quanlyxe.frmThanhToanHD.resources
 E:\do an\demo\quanlyxe\quanlyxe\obj\Debug\quanlyxe.frmTimKiem.resources
 E:\do an\demo\quanlyxe\quanlyxe\obj\Debug\quanlyxe.frmAbout.resources
 E:\do an\demo\quanlyxe\quanlyxe\obj\Debug\quanlyxe.frmxoaHD.resources
@@ -35,3 +34,4 @@ E:\do an\demo\quanlyxe\quanlyxe\obj\Debug\quanlyxe.frmBC_LaiXe.resources
 E:\do an\demo\quanlyxe\quanlyxe\obj\Debug\quanlyxe.frmBC_KH.resources
 E:\do an\demo\quanlyxe\quanlyxe\obj\Debug\quanlyxe.frmBC_NhanVien.resources
 E:\do an\demo\quanlyxe\quanlyxe\obj\Debug\quanlyxe.frmBC_Xe.resources
+E:\do an\demo\quanlyxe\quanlyxe\obj\Debug\quanlyxe.frmInPhieuTra.resources

@@ -68,12 +68,6 @@
     <Compile Include="admin.Designer.cs">
       <DependentUpon>admin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmBackup.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmBackup.Designer.cs">
-      <DependentUpon>frmBackup.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmBaoCao.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +115,12 @@
     </Compile>
     <Compile Include="frmhopdong.Designer.cs">
       <DependentUpon>frmhopdong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInPhieuTra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInPhieuTra.Designer.cs">
+      <DependentUpon>frmInPhieuTra.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLapHopDong.cs">
       <SubType>Form</SubType>
@@ -176,18 +176,6 @@
     <Compile Include="frmQuanLyXe.Designer.cs">
       <DependentUpon>frmQuanLyXe.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmThanhToan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmThanhToan.Designer.cs">
-      <DependentUpon>frmThanhToan.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmThanhToanHD.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmThanhToanHD.Designer.cs">
-      <DependentUpon>frmThanhToanHD.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmtimhopdong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -242,12 +230,6 @@
     <Compile Include="frm_TraTien.Designer.cs">
       <DependentUpon>frm_TraTien.cs</DependentUpon>
     </Compile>
-    <Compile Include="nhanvien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="nhanvien.Designer.cs">
-      <DependentUpon>nhanvien.cs</DependentUpon>
-    </Compile>
     <Compile Include="NhanVien_RPT.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -274,6 +256,16 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>qlxDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="qlxDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>qlxDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="qlxDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>qlxDataSet5.xsd</DependentUpon>
     </Compile>
     <Compile Include="Xe_rpt.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -305,6 +297,9 @@
     <EmbeddedResource Include="frmhopdong.resx">
       <DependentUpon>frmhopdong.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmInPhieuTra.resx">
+      <DependentUpon>frmInPhieuTra.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLapHopDong.resx">
       <DependentUpon>frmLapHopDong.cs</DependentUpon>
     </EmbeddedResource>
@@ -331,9 +326,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmQuanLyXe.resx">
       <DependentUpon>frmQuanLyXe.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmThanhToanHD.resx">
-      <DependentUpon>frmThanhToanHD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmtimhopdong.resx">
       <DependentUpon>frmtimhopdong.cs</DependentUpon>
@@ -374,6 +366,8 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="rptBC_LaiXe.rdlc" />
+    <EmbeddedResource Include="rptPhieuTra.rdlc" />
+    <EmbeddedResource Include="rptPhieuTraTheoHD.rdlc" />
     <EmbeddedResource Include="rptXe.rdlc" />
     <EmbeddedResource Include="rpt_HopDong.rdlc" />
     <None Include="NhanVien_RPT.xsc">
@@ -396,6 +390,28 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="qlxDataSet4.xsc">
+      <DependentUpon>qlxDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="qlxDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>qlxDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="qlxDataSet4.xss">
+      <DependentUpon>qlxDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="qlxDataSet5.xsc">
+      <DependentUpon>qlxDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="qlxDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>qlxDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="qlxDataSet5.xss">
+      <DependentUpon>qlxDataSet5.xsd</DependentUpon>
+    </None>
     <None Include="Xe_rpt.xsc">
       <DependentUpon>Xe_rpt.xsd</DependentUpon>
     </None>

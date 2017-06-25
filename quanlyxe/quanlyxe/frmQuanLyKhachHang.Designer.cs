@@ -53,14 +53,14 @@
             this.btnTim = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radNu = new System.Windows.Forms.RadioButton();
+            this.radNam = new System.Windows.Forms.RadioButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtHoKH = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.radNam = new System.Windows.Forms.RadioButton();
-            this.radNu = new System.Windows.Forms.RadioButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.txtHoKH = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -319,7 +319,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.groupBox1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.groupBox1.Controls.Add(this.radNu);
             this.groupBox1.Controls.Add(this.radNam);
             this.groupBox1.Controls.Add(this.pictureBox1);
@@ -352,6 +352,28 @@
             this.groupBox1.Text = "Quản lý khách hàng";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // radNu
+            // 
+            this.radNu.AutoSize = true;
+            this.radNu.Location = new System.Drawing.Point(447, 156);
+            this.radNu.Name = "radNu";
+            this.radNu.Size = new System.Drawing.Size(43, 20);
+            this.radNu.TabIndex = 8;
+            this.radNu.TabStop = true;
+            this.radNu.Text = "Nữ";
+            this.radNu.UseVisualStyleBackColor = true;
+            // 
+            // radNam
+            // 
+            this.radNam.AutoSize = true;
+            this.radNam.Location = new System.Drawing.Point(360, 157);
+            this.radNam.Name = "radNam";
+            this.radNam.Size = new System.Drawing.Size(52, 20);
+            this.radNam.TabIndex = 8;
+            this.radNam.TabStop = true;
+            this.radNam.Text = "Nam";
+            this.radNam.UseVisualStyleBackColor = true;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(26, 21);
@@ -359,6 +381,33 @@
             this.pictureBox1.Size = new System.Drawing.Size(184, 184);
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label8.ForeColor = System.Drawing.Color.Blue;
+            this.label8.Location = new System.Drawing.Point(231, 78);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(93, 16);
+            this.label8.TabIndex = 3;
+            this.label8.Text = "Họ khách hàng";
+            // 
+            // txtHoKH
+            // 
+            this.txtHoKH.Location = new System.Drawing.Point(360, 78);
+            this.txtHoKH.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtHoKH.Name = "txtHoKH";
+            this.txtHoKH.Size = new System.Drawing.Size(130, 22);
+            this.txtHoKH.TabIndex = 1;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(360, 78);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(130, 22);
+            this.textBox1.TabIndex = 1;
             // 
             // groupBox2
             // 
@@ -385,60 +434,11 @@
             this.label15.TabIndex = 3;
             this.label15.Text = "QUẢN LÝ THÔNG TIN KHÁCH HÀNG";
             // 
-            // radNam
-            // 
-            this.radNam.AutoSize = true;
-            this.radNam.Location = new System.Drawing.Point(360, 157);
-            this.radNam.Name = "radNam";
-            this.radNam.Size = new System.Drawing.Size(52, 20);
-            this.radNam.TabIndex = 8;
-            this.radNam.TabStop = true;
-            this.radNam.Text = "Nam";
-            this.radNam.UseVisualStyleBackColor = true;
-            // 
-            // radNu
-            // 
-            this.radNu.AutoSize = true;
-            this.radNu.Location = new System.Drawing.Point(447, 156);
-            this.radNu.Name = "radNu";
-            this.radNu.Size = new System.Drawing.Size(43, 20);
-            this.radNu.TabIndex = 8;
-            this.radNu.TabStop = true;
-            this.radNu.Text = "Nữ";
-            this.radNu.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(360, 78);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(130, 22);
-            this.textBox1.TabIndex = 1;
-            // 
-            // txtHoKH
-            // 
-            this.txtHoKH.Location = new System.Drawing.Point(360, 78);
-            this.txtHoKH.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtHoKH.Name = "txtHoKH";
-            this.txtHoKH.Size = new System.Drawing.Size(130, 22);
-            this.txtHoKH.TabIndex = 1;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label8.ForeColor = System.Drawing.Color.Blue;
-            this.label8.Location = new System.Drawing.Point(231, 78);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(93, 16);
-            this.label8.TabIndex = 3;
-            this.label8.Text = "Họ khách hàng";
-            // 
             // frmQuanLyKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Silver;
+            this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(1090, 585);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);

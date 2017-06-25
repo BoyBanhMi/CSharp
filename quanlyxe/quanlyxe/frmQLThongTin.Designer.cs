@@ -108,7 +108,7 @@
             // 
             // pnQuanLyThongTin
             // 
-            this.pnQuanLyThongTin.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.pnQuanLyThongTin.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pnQuanLyThongTin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pnQuanLyThongTin.Controls.Add(this.label6);
             this.pnQuanLyThongTin.Location = new System.Drawing.Point(152, 2);
@@ -131,7 +131,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.DodgerBlue;
+            this.groupBox1.BackColor = System.Drawing.Color.White;
             this.groupBox1.Controls.Add(this.btnExit);
             this.groupBox1.Controls.Add(this.cmdQuanLyLaiXe);
             this.groupBox1.Controls.Add(this.cmdQuanLyXe);

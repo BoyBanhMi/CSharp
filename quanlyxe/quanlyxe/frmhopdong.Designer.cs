@@ -47,11 +47,11 @@
             this.cmdSua = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.rad_Nu = new System.Windows.Forms.RadioButton();
+            this.rad_Nam = new System.Windows.Forms.RadioButton();
             this.label10 = new System.Windows.Forms.Label();
             this.cmdRefresh = new System.Windows.Forms.Button();
             this.pnThemHopDong = new System.Windows.Forms.Panel();
-            this.rad_Nam = new System.Windows.Forms.RadioButton();
-            this.rad_Nu = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dtgThemKhachHang)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -103,7 +103,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Yellow;
+            this.label1.ForeColor = System.Drawing.Color.Blue;
             this.label1.Location = new System.Drawing.Point(7, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(95, 16);
@@ -142,7 +142,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Yellow;
+            this.label2.ForeColor = System.Drawing.Color.Blue;
             this.label2.Location = new System.Drawing.Point(3, 54);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(97, 16);
@@ -153,7 +153,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Yellow;
+            this.label3.ForeColor = System.Drawing.Color.Blue;
             this.label3.Location = new System.Drawing.Point(35, 77);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 16);
@@ -164,7 +164,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Yellow;
+            this.label4.ForeColor = System.Drawing.Color.Blue;
             this.label4.Location = new System.Drawing.Point(35, 109);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(57, 16);
@@ -175,7 +175,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Yellow;
+            this.label6.ForeColor = System.Drawing.Color.Blue;
             this.label6.Location = new System.Drawing.Point(260, 50);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(47, 16);
@@ -186,7 +186,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Yellow;
+            this.label7.ForeColor = System.Drawing.Color.Blue;
             this.label7.Location = new System.Drawing.Point(243, 79);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(66, 16);
@@ -208,7 +208,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.Teal;
+            this.groupBox1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.groupBox1.Controls.Add(this.cmdSua);
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.groupBox2);
@@ -271,11 +271,34 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin khách hàng";
             // 
+            // rad_Nu
+            // 
+            this.rad_Nu.AutoSize = true;
+            this.rad_Nu.Location = new System.Drawing.Point(172, 105);
+            this.rad_Nu.Name = "rad_Nu";
+            this.rad_Nu.Size = new System.Drawing.Size(46, 22);
+            this.rad_Nu.TabIndex = 7;
+            this.rad_Nu.TabStop = true;
+            this.rad_Nu.Text = "Nữ";
+            this.rad_Nu.UseVisualStyleBackColor = true;
+            // 
+            // rad_Nam
+            // 
+            this.rad_Nam.AutoSize = true;
+            this.rad_Nam.Checked = true;
+            this.rad_Nam.Location = new System.Drawing.Point(109, 105);
+            this.rad_Nam.Name = "rad_Nam";
+            this.rad_Nam.Size = new System.Drawing.Size(57, 22);
+            this.rad_Nam.TabIndex = 6;
+            this.rad_Nam.TabStop = true;
+            this.rad_Nam.Text = "Nam";
+            this.rad_Nam.UseVisualStyleBackColor = true;
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Yellow;
+            this.label10.ForeColor = System.Drawing.Color.Blue;
             this.label10.Location = new System.Drawing.Point(259, 27);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(48, 16);
@@ -297,38 +320,17 @@
             // 
             // pnThemHopDong
             // 
+            this.pnThemHopDong.BackColor = System.Drawing.SystemColors.Control;
             this.pnThemHopDong.Location = new System.Drawing.Point(0, 279);
             this.pnThemHopDong.Name = "pnThemHopDong";
             this.pnThemHopDong.Size = new System.Drawing.Size(1247, 304);
             this.pnThemHopDong.TabIndex = 9;
             // 
-            // rad_Nam
-            // 
-            this.rad_Nam.AutoSize = true;
-            this.rad_Nam.Location = new System.Drawing.Point(109, 105);
-            this.rad_Nam.Name = "rad_Nam";
-            this.rad_Nam.Size = new System.Drawing.Size(57, 22);
-            this.rad_Nam.TabIndex = 6;
-            this.rad_Nam.TabStop = true;
-            this.rad_Nam.Text = "Nam";
-            this.rad_Nam.UseVisualStyleBackColor = true;
-            // 
-            // rad_Nu
-            // 
-            this.rad_Nu.AutoSize = true;
-            this.rad_Nu.Location = new System.Drawing.Point(172, 105);
-            this.rad_Nu.Name = "rad_Nu";
-            this.rad_Nu.Size = new System.Drawing.Size(46, 22);
-            this.rad_Nu.TabIndex = 7;
-            this.rad_Nu.TabStop = true;
-            this.rad_Nu.Text = "Nữ";
-            this.rad_Nu.UseVisualStyleBackColor = true;
-            // 
             // frmhopdong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(1250, 532);
             this.Controls.Add(this.pnThemHopDong);
             this.Controls.Add(this.groupBox1);
