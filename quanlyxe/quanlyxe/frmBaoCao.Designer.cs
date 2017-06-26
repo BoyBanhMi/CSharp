@@ -106,6 +106,7 @@
             this.btn_ThanhToan.TabIndex = 0;
             this.btn_ThanhToan.Text = "Phiếu Thanh Toán";
             this.btn_ThanhToan.UseVisualStyleBackColor = true;
+            this.btn_ThanhToan.Click += new System.EventHandler(this.btn_ThanhToan_Click);
             // 
             // pn_baocao
             // 
@@ -128,7 +129,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(1378, 762);
+            this.ClientSize = new System.Drawing.Size(1354, 733);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.pn_baocao);
             this.Controls.Add(this.btn_NV);

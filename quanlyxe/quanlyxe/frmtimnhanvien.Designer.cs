@@ -164,6 +164,7 @@
             this.txtTimKiemKH.Name = "txtTimKiemKH";
             this.txtTimKiemKH.Size = new System.Drawing.Size(381, 20);
             this.txtTimKiemKH.TabIndex = 6;
+            this.txtTimKiemKH.TextChanged += new System.EventHandler(this.txtTimKiemKH_TextChanged);
             // 
             // pictureBox2
             // 

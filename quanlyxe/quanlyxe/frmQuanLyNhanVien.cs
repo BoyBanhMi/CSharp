@@ -107,7 +107,7 @@ namespace quanlyxe
             {
                 SqlConnection conn = new SqlConnection(Program.strconn);
                 conn.Open();
-                SqlDataAdapter da = new SqlDataAdapter("select MaNhanVien as [Mã nhân viên], TenNhanVien as [Tên nhân viên], GioiTinh as [Giới tính], NgaySinh as [Ngày sinh], DiaChi as  [Địa chỉ], DienThoai as [Điện thoại], Email, BangCap as [Bằng cấp], CMND, NgayVaoLam as [Ngày vào làm] from tb_NhanVien ", conn);
+                SqlDataAdapter da = new SqlDataAdapter("select row_number() over (order by MaNhanVien) as STT, MaNhanVien as [Mã nhân viên], TenNhanVien as [Tên nhân viên], case when GioiTinh='1' then 'Nam' else N'Nữ' end as [Giới tính], NgaySinh as [Ngày sinh], DiaChi as  [Địa chỉ], DienThoai as [Điện thoại], Email, BangCap as [Bằng cấp], CMND, NgayVaoLam as [Ngày vào làm] from tb_NhanVien ", conn);
                 DataTable dt = new DataTable();
                 dt.Clear();
                 da.Fill(dt);

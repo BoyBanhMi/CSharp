@@ -34,7 +34,7 @@ namespace quanlyxe
             {
                 SqlConnection conn = new SqlConnection(Program.strconn);
                 conn.Open();
-                SqlDataAdapter da = new SqlDataAdapter("select MaKhachHang as [Mã Khách Hàng], TenKhachHang as [Tên Khách Hàng], NgaySinh as [Ngày Sinh], GioiTinh as [Giới Tính], DiaChi as [Địa Chỉ], CMND as [Số CMND], DienThoai as [Số Điện Thoại], Email as [Email] from tb_KhachHang where MaKhachHang like '%" + txtTimKiemKH.Text + "%'", conn);
+                SqlDataAdapter da = new SqlDataAdapter("select MaKhachHang as [Mã Khách Hàng], TenKhachHang as [Tên Khách Hàng], NgaySinh as [Ngày Sinh],case when GioiTinh='1' then 'Nam' else N'Nữ' end as [Giới Tính], DiaChi as [Địa Chỉ], CMND as [Số CMND], DienThoai as [Số Điện Thoại], Email as [Email] from tb_KhachHang where MaKhachHang like '%" + txtTimKiemKH.Text + "%'", conn);
                 DataSet ds = new DataSet();
                 da.Fill(ds, "tb_KhachHang");
                 dgvTimKiemKH.DataSource = ds.Tables["tb_KhachHang"].DefaultView;
@@ -43,7 +43,7 @@ namespace quanlyxe
             {
                 SqlConnection conn = new SqlConnection(Program.strconn);
                 conn.Open();
-                SqlDataAdapter da = new SqlDataAdapter("select MaKhachHang as [Mã Khách Hàng], TenKhachHang as [Tên Khách Hàng], NgaySinh as [Ngày Sinh], GioiTinh as [Giới Tính], DiaChi as [Địa Chỉ], CMND as [Số CMND], DienThoai as [Số Điện Thoại], Email as [Email] from tb_KhachHang where TenKhachHang like '%" + txtTimKiemKH.Text + "%'", conn);
+                SqlDataAdapter da = new SqlDataAdapter("select MaKhachHang as [Mã Khách Hàng], TenKhachHang as [Tên Khách Hàng], NgaySinh as [Ngày Sinh], case when GioiTinh='1' then 'Nam' else N'Nữ' end as [Giới Tính], DiaChi as [Địa Chỉ], CMND as [Số CMND], DienThoai as [Số Điện Thoại], Email as [Email] from tb_KhachHang where TenKhachHang like '%" + txtTimKiemKH.Text + "%'", conn);
                 DataSet ds = new DataSet();
                 da.Fill(ds, "tb_KhachHang");
                 dgvTimKiemKH.DataSource = ds.Tables["tb_KhachHang"].DefaultView;
@@ -52,7 +52,7 @@ namespace quanlyxe
             {
                 SqlConnection conn = new SqlConnection(Program.strconn);
                 conn.Open();
-                SqlDataAdapter da = new SqlDataAdapter("select MaKhachHang as [Mã Khách Hàng], TenKhachHang as [Tên Khách Hàng], NgaySinh as [Ngày Sinh], GioiTinh as [Giới Tính], DiaChi as [Địa Chỉ], CMND as [Số CMND], DienThoai as [Số Điện Thoại], Email as [Email] from tb_KhachHang where CMND like '%" + txtTimKiemKH.Text + "%'", conn);
+                SqlDataAdapter da = new SqlDataAdapter("select MaKhachHang as [Mã Khách Hàng], TenKhachHang as [Tên Khách Hàng], NgaySinh as [Ngày Sinh], case when GioiTinh='1' then 'Nam' else N'Nữ' end as [Giới Tính], DiaChi as [Địa Chỉ], CMND as [Số CMND], DienThoai as [Số Điện Thoại], Email as [Email] from tb_KhachHang where CMND like '%" + txtTimKiemKH.Text + "%'", conn);
                 DataSet ds = new DataSet();
                 da.Fill(ds, "tb_KhachHang");
                 dgvTimKiemKH.DataSource = ds.Tables["tb_KhachHang"].DefaultView;
@@ -61,7 +61,47 @@ namespace quanlyxe
             {
                 SqlConnection conn = new SqlConnection(Program.strconn);
                 conn.Open();
-                SqlDataAdapter da = new SqlDataAdapter("select MaKhachHang as [Mã Khách Hàng], TenKhachHang as [Tên Khách Hàng], NgaySinh as [Ngày Sinh], GioiTinh as [Giới Tính], DiaChi as [Địa Chỉ], CMND as [Số CMND], DienThoai as [Số Điện Thoại], Email as [Email] from tb_KhachHang where DienThoai like '%" + txtTimKiemKH.Text + "%'", conn);
+                SqlDataAdapter da = new SqlDataAdapter("select MaKhachHang as [Mã Khách Hàng], TenKhachHang as [Tên Khách Hàng], NgaySinh as [Ngày Sinh], case when GioiTinh='1' then 'Nam' else N'Nữ' end as [Giới Tính], DiaChi as [Địa Chỉ], CMND as [Số CMND], DienThoai as [Số Điện Thoại], Email as [Email] from tb_KhachHang where DienThoai like '%" + txtTimKiemKH.Text + "%'", conn);
+                DataSet ds = new DataSet();
+                da.Fill(ds, "tb_KhachHang");
+                dgvTimKiemKH.DataSource = ds.Tables["tb_KhachHang"].DefaultView;
+            }
+        }
+
+        private void txtTimKiemKH_TextChanged(object sender, EventArgs e)
+        {
+            if (rbTimKiemMakh.Checked == true)
+            {
+                SqlConnection conn = new SqlConnection(Program.strconn);
+                conn.Open();
+                SqlDataAdapter da = new SqlDataAdapter("select MaKhachHang as [Mã Khách Hàng], TenKhachHang as [Tên Khách Hàng], NgaySinh as [Ngày Sinh],case when GioiTinh='1' then 'Nam' else N'Nữ' end as [Giới Tính], DiaChi as [Địa Chỉ], CMND as [Số CMND], DienThoai as [Số Điện Thoại], Email as [Email] from tb_KhachHang where MaKhachHang like '%" + txtTimKiemKH.Text + "%'", conn);
+                DataSet ds = new DataSet();
+                da.Fill(ds, "tb_KhachHang");
+                dgvTimKiemKH.DataSource = ds.Tables["tb_KhachHang"].DefaultView;
+            }
+            if (rbTimKiemTheoTenkh.Checked == true)
+            {
+                SqlConnection conn = new SqlConnection(Program.strconn);
+                conn.Open();
+                SqlDataAdapter da = new SqlDataAdapter("select MaKhachHang as [Mã Khách Hàng], TenKhachHang as [Tên Khách Hàng], NgaySinh as [Ngày Sinh], case when GioiTinh='1' then 'Nam' else N'Nữ' end as [Giới Tính], DiaChi as [Địa Chỉ], CMND as [Số CMND], DienThoai as [Số Điện Thoại], Email as [Email] from tb_KhachHang where TenKhachHang like '%" + txtTimKiemKH.Text + "%'", conn);
+                DataSet ds = new DataSet();
+                da.Fill(ds, "tb_KhachHang");
+                dgvTimKiemKH.DataSource = ds.Tables["tb_KhachHang"].DefaultView;
+            }
+            if (rbcmnd.Checked == true)
+            {
+                SqlConnection conn = new SqlConnection(Program.strconn);
+                conn.Open();
+                SqlDataAdapter da = new SqlDataAdapter("select MaKhachHang as [Mã Khách Hàng], TenKhachHang as [Tên Khách Hàng], NgaySinh as [Ngày Sinh], case when GioiTinh='1' then 'Nam' else N'Nữ' end as [Giới Tính], DiaChi as [Địa Chỉ], CMND as [Số CMND], DienThoai as [Số Điện Thoại], Email as [Email] from tb_KhachHang where CMND like '%" + txtTimKiemKH.Text + "%'", conn);
+                DataSet ds = new DataSet();
+                da.Fill(ds, "tb_KhachHang");
+                dgvTimKiemKH.DataSource = ds.Tables["tb_KhachHang"].DefaultView;
+            }
+            if (rbdt.Checked == true)
+            {
+                SqlConnection conn = new SqlConnection(Program.strconn);
+                conn.Open();
+                SqlDataAdapter da = new SqlDataAdapter("select MaKhachHang as [Mã Khách Hàng], TenKhachHang as [Tên Khách Hàng], NgaySinh as [Ngày Sinh], case when GioiTinh='1' then 'Nam' else N'Nữ' end as [Giới Tính], DiaChi as [Địa Chỉ], CMND as [Số CMND], DienThoai as [Số Điện Thoại], Email as [Email] from tb_KhachHang where DienThoai like '%" + txtTimKiemKH.Text + "%'", conn);
                 DataSet ds = new DataSet();
                 da.Fill(ds, "tb_KhachHang");
                 dgvTimKiemKH.DataSource = ds.Tables["tb_KhachHang"].DefaultView;

@@ -61,5 +61,11 @@ namespace quanlyxe
             pn_baocao.Controls.Clear();
             pn_baocao.Controls.Add(f);
         }
+
+        private void btn_ThanhToan_Click(object sender, EventArgs e)
+        {
+            frmBC_PhieuTra f = new frmBC_PhieuTra();
+            f.Show();
+        }
     }
 }

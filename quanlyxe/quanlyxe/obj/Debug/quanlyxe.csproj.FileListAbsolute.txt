@@ -35,3 +35,4 @@ E:\do an\demo\quanlyxe\quanlyxe\obj\Debug\quanlyxe.frmBC_KH.resources
 E:\do an\demo\quanlyxe\quanlyxe\obj\Debug\quanlyxe.frmBC_NhanVien.resources
 E:\do an\demo\quanlyxe\quanlyxe\obj\Debug\quanlyxe.frmBC_Xe.resources
 E:\do an\demo\quanlyxe\quanlyxe\obj\Debug\quanlyxe.frmInPhieuTra.resources
+E:\do an\demo\quanlyxe\quanlyxe\obj\Debug\quanlyxe.frmBC_PhieuTra.resources

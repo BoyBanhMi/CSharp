@@ -98,6 +98,12 @@
     <Compile Include="frmBC_NhanVien.Designer.cs">
       <DependentUpon>frmBC_NhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmBC_PhieuTra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBC_PhieuTra.Designer.cs">
+      <DependentUpon>frmBC_PhieuTra.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmBC_Xe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -267,6 +273,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>qlxDataSet5.xsd</DependentUpon>
     </Compile>
+    <Compile Include="qlxDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>qlxDataSet6.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Xe_rpt.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -287,6 +298,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmBC_NhanVien.resx">
       <DependentUpon>frmBC_NhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBC_PhieuTra.resx">
+      <DependentUpon>frmBC_PhieuTra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmBC_Xe.resx">
       <DependentUpon>frmBC_Xe.cs</DependentUpon>
@@ -368,6 +382,7 @@
     <EmbeddedResource Include="rptBC_LaiXe.rdlc" />
     <EmbeddedResource Include="rptPhieuTra.rdlc" />
     <EmbeddedResource Include="rptPhieuTraTheoHD.rdlc" />
+    <EmbeddedResource Include="rptThanhToan.rdlc" />
     <EmbeddedResource Include="rptXe.rdlc" />
     <EmbeddedResource Include="rpt_HopDong.rdlc" />
     <None Include="NhanVien_RPT.xsc">
@@ -411,6 +426,17 @@
     </None>
     <None Include="qlxDataSet5.xss">
       <DependentUpon>qlxDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="qlxDataSet6.xsc">
+      <DependentUpon>qlxDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="qlxDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>qlxDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="qlxDataSet6.xss">
+      <DependentUpon>qlxDataSet6.xsd</DependentUpon>
     </None>
     <None Include="Xe_rpt.xsc">
       <DependentUpon>Xe_rpt.xsd</DependentUpon>
