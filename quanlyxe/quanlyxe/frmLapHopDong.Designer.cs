@@ -38,7 +38,6 @@
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.cbbMaKH = new System.Windows.Forms.ComboBox();
-            this.cbb_gia = new System.Windows.Forms.ComboBox();
             this.cbb_chonLX = new System.Windows.Forms.ComboBox();
             this.cbb_chonxe = new System.Windows.Forms.ComboBox();
             this.cbbMaNV = new System.Windows.Forms.ComboBox();
@@ -56,6 +55,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtGia = new System.Windows.Forms.TextBox();
             this.pnThemHopDong.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewlapHD)).BeginInit();
             this.SuspendLayout();
@@ -72,13 +72,13 @@
             this.pnThemHopDong.Controls.Add(this.btnSua);
             this.pnThemHopDong.Controls.Add(this.btnThem);
             this.pnThemHopDong.Controls.Add(this.cbbMaKH);
-            this.pnThemHopDong.Controls.Add(this.cbb_gia);
             this.pnThemHopDong.Controls.Add(this.cbb_chonLX);
             this.pnThemHopDong.Controls.Add(this.cbb_chonxe);
             this.pnThemHopDong.Controls.Add(this.cbbMaNV);
             this.pnThemHopDong.Controls.Add(this.dtpHannThanhToan);
             this.pnThemHopDong.Controls.Add(this.dtpNgayLap);
             this.pnThemHopDong.Controls.Add(this.label6);
+            this.pnThemHopDong.Controls.Add(this.txtGia);
             this.pnThemHopDong.Controls.Add(this.txt_tiencoc);
             this.pnThemHopDong.Controls.Add(this.txtTenHD);
             this.pnThemHopDong.Controls.Add(this.label3);
@@ -190,14 +190,6 @@
             this.cbbMaKH.Name = "cbbMaKH";
             this.cbbMaKH.Size = new System.Drawing.Size(121, 24);
             this.cbbMaKH.TabIndex = 3;
-            // 
-            // cbb_gia
-            // 
-            this.cbb_gia.FormattingEnabled = true;
-            this.cbb_gia.Location = new System.Drawing.Point(621, 40);
-            this.cbb_gia.Name = "cbb_gia";
-            this.cbb_gia.Size = new System.Drawing.Size(150, 24);
-            this.cbb_gia.TabIndex = 3;
             // 
             // cbb_chonLX
             // 
@@ -348,6 +340,13 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã Hợp Đồng";
             // 
+            // txtGia
+            // 
+            this.txtGia.Location = new System.Drawing.Point(621, 40);
+            this.txtGia.Name = "txtGia";
+            this.txtGia.Size = new System.Drawing.Size(150, 22);
+            this.txtGia.TabIndex = 1;
+            // 
             // frmLapHopDong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -390,11 +389,11 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.RadioButton rb_coTX;
         private System.Windows.Forms.RadioButton rb_kTX;
-        private System.Windows.Forms.ComboBox cbb_gia;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cbb_chonLX;
         private System.Windows.Forms.Label lbl_LX;
         private System.Windows.Forms.TextBox txt_tiencoc;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtGia;
     }
 }

@@ -22,13 +22,13 @@ namespace quanlyxe
         {
 
         }
-        public void themHD(string mahd, string tenhd, string ngaylap, string manv, string makh, string ngaythanhtoan, int x, string maxe, string magia, string malaixe, string tiencoc) 
+        public void themHD(string mahd, string tenhd, string ngaylap, string manv, string makh, string ngaythanhtoan, int x, string maxe, string malaixe, string magia, string tiencoc) 
         {
             try
             {
                 SqlConnection con = new SqlConnection(Program.strconn);
                 con.Open();
-                string cmd = "INSERT INTO tb_HopDong VALUES(N'" + mahd + "',N'" + tenhd + "','" + ngaylap + "',N'" + manv + "',N'" + makh + "','" + ngaythanhtoan + "','" + x + "','"+maxe+"','"+magia+"','"+malaixe+"','"+tiencoc+"')";
+                string cmd = "INSERT INTO tb_HopDong VALUES(N'" + mahd + "',N'" + tenhd + "','" + ngaylap + "',N'" + manv + "',N'" + makh + "','" + ngaythanhtoan + "','" + x + "','"+maxe+"','"+malaixe+"','"+magia+"','"+tiencoc+"')";
                 SqlCommand sqlCmd = new SqlCommand(cmd, con);
                 sqlCmd.ExecuteNonQuery();
                 con.Close();
@@ -45,7 +45,7 @@ namespace quanlyxe
             {
                 SqlConnection con = new SqlConnection(Program.strconn);
                 con.Open();
-                string cmd = "INSERT INTO tb_HopDong VALUES(N'" + mahd + "',N'" + tenhd + "','" + ngaylap + "',N'" + manv + "',N'" + makh + "','" + ngaythanhtoan + "','" + x + "','" + maxe + "','" + magia + "','0','" + tiencoc + "')";
+                string cmd = "INSERT INTO tb_HopDong VALUES(N'" + mahd + "',N'" + tenhd + "','" + ngaylap + "',N'" + manv + "',N'" + makh + "','" + ngaythanhtoan + "','" + x + "','" + maxe + "','0','" + magia + "','" + tiencoc + "')";
                 SqlCommand sqlCmd = new SqlCommand(cmd, con);
                 sqlCmd.ExecuteNonQuery();
                 con.Close();
@@ -118,12 +118,12 @@ namespace quanlyxe
             {
                 if (rb_coTX.Checked == true)
                 {
-                    themHD(cbbMaHD.Text, txtTenHD.Text, dtpNgayLap.Text, cbbMaNV.SelectedValue.ToString(), cbbMaKH.SelectedValue.ToString(), dtpHannThanhToan.Text, 0, cbb_chonxe.SelectedValue.ToString(), cbb_gia.SelectedValue.ToString(), cbb_chonLX.SelectedValue.ToString(), txt_tiencoc.Text);
+                    themHD(cbbMaHD.Text, txtTenHD.Text, dtpNgayLap.Text, cbbMaNV.SelectedValue.ToString(), cbbMaKH.SelectedValue.ToString(), dtpHannThanhToan.Text, 0, cbb_chonxe.SelectedValue.ToString(), cbb_chonLX.SelectedValue.ToString(), txtGia.Text, txt_tiencoc.Text);
                     dataGridViewlapHD.DataSource = ds_HD();
                 }
                 else
                 {
-                    themHDKLX(cbbMaHD.Text, txtTenHD.Text, dtpNgayLap.Text, cbbMaNV.SelectedValue.ToString(), cbbMaKH.SelectedValue.ToString(), dtpHannThanhToan.Text, 0, cbb_chonxe.SelectedValue.ToString(), cbb_gia.SelectedValue.ToString(), txt_tiencoc.Text);
+                    themHDKLX(cbbMaHD.Text, txtTenHD.Text, dtpNgayLap.Text, cbbMaNV.SelectedValue.ToString(), cbbMaKH.SelectedValue.ToString(), dtpHannThanhToan.Text, 0, cbb_chonxe.SelectedValue.ToString(), txtGia.Text, txt_tiencoc.Text);
                     dataGridViewlapHD.DataSource = ds_HD();
                 }
             }
@@ -174,9 +174,7 @@ namespace quanlyxe
             cbbMaKH.DisplayMember = "MaKhachHang";
             cbbMaKH.ValueMember = "MaKhachHang";
 
-            cbb_gia.DataSource = ds_Gia();
-            cbb_gia.DisplayMember = "DonGia";
-            cbb_gia.ValueMember = "MaGia";
+            
 
             cbb_chonLX.DataSource = ds_LX();
             cbb_chonLX.DisplayMember = "TenLaiXe";
@@ -197,8 +195,8 @@ namespace quanlyxe
             dataGridViewlapHD.Columns[5].HeaderText = "Hạn Thanh Toán";
             dataGridViewlapHD.Columns[6].HeaderText = "Tình Trạng Thanh Toán";
             dataGridViewlapHD.Columns[7].HeaderText = "Mã Xe";
-            dataGridViewlapHD.Columns[8].HeaderText = "Mã Giá";
-            dataGridViewlapHD.Columns[9].HeaderText = "Mã Lái Xe";
+            dataGridViewlapHD.Columns[8].HeaderText = "Mã Lái Xe";
+            dataGridViewlapHD.Columns[9].HeaderText = "Giá";
 
             lbl_LX.Visible = false;
             cbb_chonLX.Visible = false;
@@ -206,7 +204,7 @@ namespace quanlyxe
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            suaHD(cbbMaHD.SelectedValue.ToString(), txtTenHD.Text, dtpNgayLap.Text, cbbMaNV.SelectedValue.ToString(), cbbMaKH.SelectedValue.ToString(), dtpHannThanhToan.Text, 0, cbb_chonxe.SelectedValue.ToString(), cbb_gia.SelectedValue.ToString(), cbb_chonLX.SelectedValue.ToString());
+            suaHD(cbbMaHD.SelectedValue.ToString(), txtTenHD.Text, dtpNgayLap.Text, cbbMaNV.SelectedValue.ToString(), cbbMaKH.SelectedValue.ToString(), dtpHannThanhToan.Text, 0, cbb_chonxe.SelectedValue.ToString(), cbb_chonLX.SelectedValue.ToString(), txtGia.Text);
             dataGridViewlapHD.DataSource = ds_HD();
         }
 

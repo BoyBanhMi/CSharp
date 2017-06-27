@@ -83,15 +83,17 @@ namespace quanlyxe
         }
         private void thanhtoan(string mahd, string makh, string manv, string ghichu)
         {
-          // try
-          // {
+           try
+           {
 
                 int gia = 500;
                 SqlConnection con = new SqlConnection(Program.strconn);
                 
-                SqlCommand sqlcm = new SqlCommand("select DAY(NgayLapHopDong),DAY(HanThanhToan), TienCoc, NgayLapHopDong, HanThanhToan from tb_HopDong where MaHopDong='" + mahd + "'", con);
+                SqlCommand sqlcm = new SqlCommand("select DAY(NgayLapHopDong),DAY(HanThanhToan), TienCoc, NgayLapHopDong, HanThanhToan,TinhTrangThanhToan,Gia from tb_HopDong where MaHopDong='" + mahd + "'", con);
+                SqlCommand sqlc1m = new SqlCommand("select DonGia from tb_Gia where tb_HopDong.MaGia=tb_Gia.MaGia", con);
                 con.Open();
                 SqlDataReader dr = sqlcm.ExecuteReader();
+               
                 if (dr.Read())
                 {
                     string ngaylapHD = dr[3].ToString();
@@ -99,34 +101,55 @@ namespace quanlyxe
                     int ngaylap = Convert.ToInt32(dr[0]);
                     int ngaythanhtoan = Convert.ToInt32(dr[1]);
                     int tiencoc = Convert.ToInt32(dr[2]);
-                    int tongtien = Math.Abs((ngaythanhtoan - ngaylap)) * gia - tiencoc;
+                    long giatien = Convert.ToInt64(dr[6]);
+                    long tongtien = Math.Abs((ngaythanhtoan - ngaylap) * giatien - tiencoc);
+                    int tinhtrang = Convert.ToInt16(dr[5]);
+                    
+                    
                     con.Close();
-                    SqlCommand nhap = new SqlCommand("insert into tb_PhieuTra values('" + manv + "','" + makh + "','" + mahd + "','" + ngaylapHD + "','" + ngaytra + "','" + tongtien + "','True','" + ghichu + "')", con);
-                    con.Open();
-                    nhap.ExecuteNonQuery();
-                    SqlCommand update = new SqlCommand("update tb_HopDong set TinhTrangThanhToan = 'True' where MaHopDong = '" + mahd + "'", con);
-                    update.ExecuteNonQuery();
-                    con.Close();
-                    MessageBox.Show("Nhập Thành công");
-    
+                    if (tinhtrang == 1)
+                    {
+                        MessageBox.Show("Hợp đồng đã thanh toán" +giatien);
+                    }
+                    else
+                    {
+
+
+                        SqlCommand nhap = new SqlCommand("insert into tb_PhieuTra values('" + manv + "','" + makh + "','" + mahd + "','" + ngaylapHD + "','" + ngaytra + "','" + tongtien + "','True','" + ghichu + "')", con);
+                        con.Open();
+                        nhap.ExecuteNonQuery();
+                        SqlCommand update = new SqlCommand("update tb_HopDong set TinhTrangThanhToan = 'True' where MaHopDong = '" + mahd + "'", con);
+                        update.ExecuteNonQuery();
+                        con.Close();
+                        MessageBox.Show("Thanh Toán Thành công");
+                    }
                 }
-           // }
-           //catch
-          // {
-         //       MessageBox.Show("Nhập thất bại");
-          // }
+           }
+           catch
+           {
+              MessageBox.Show("Hợp đồng đã được thanh toán");
+          }
             
         }
         private void btn_XemHopDong_Click(object sender, EventArgs e)
         {
-            if (cbb_MaHD.Text == "" || cbb_MaKH.Text== "") 
-            {  
-                MessageBox.Show("Các trường không được để trống","Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else
+            try
             {
-                timHD(cbb_MaHD.SelectedValue.ToString(), cbb_MaKH.SelectedValue.ToString());
-                
+
+
+                if (cbb_MaHD.Text == "" || cbb_MaKH.Text == "")
+                {
+                    MessageBox.Show("Các trường không được để trống", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    timHD(cbb_MaHD.SelectedValue.ToString(), cbb_MaKH.SelectedValue.ToString());
+
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Hợp dồng không tồn tại","Lỗi",MessageBoxButtons.OK,MessageBoxIcon.Warning);
             }
             
         }
@@ -150,7 +173,7 @@ namespace quanlyxe
 
         private void btn_thanhtoan_Click(object sender, EventArgs e)
         {
-            thanhtoan(cbb_MaHD.Text, cbb_MaKH.Text, cbb_NhanVien.Text, txt_ghichu.Text);
+            thanhtoan(cbb_MaHD.Text, cbb_MaKH.Text, cbb_NhanVien.SelectedValue.ToString(), txt_ghichu.Text);
             dtp_chitiet.DataSource = DS_PhieuTra();
         }
 
