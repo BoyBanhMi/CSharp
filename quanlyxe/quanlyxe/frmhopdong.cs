@@ -121,5 +121,10 @@ namespace quanlyxe
                 MessageBox.Show("Sửa khách hàng thất bại, Lỗi CSDL", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void dtgThemKhachHang_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

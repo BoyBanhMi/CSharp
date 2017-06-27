@@ -55,7 +55,7 @@ namespace quanlyxe
             {
                 SqlConnection con = new SqlConnection(Program.strconn);
                 con.Open();
-                SqlCommand cmd = new SqlCommand("insert into tb_LaiXe (MaLaiXe, TenLaiXe, NgaySinh, GioiTinh, DiaChi, DienThoai, CMND,Email, NgayNhanViec,TinhTrangLaiXe) values ('" + txtMaLaiXe.Text + "', '" + txtTenLaiXe.Text + "', '" + dtpNgaySinh.Text + "','" + txtGioiTinh.Text + "', '" + txtDiaChi.Text + "', '" + txtDienThoai.Text + "', '" + txtCMND.Text + "', '" + txtEmail.Text + "', '" + dtpNgayNhanViec.Text + "', '" + txtTinhTrangLaiXe.Text + "')", con);
+                SqlCommand cmd = new SqlCommand("insert into tb_LaiXe (MaLaiXe, TenLaiXe, NgaySinh, GioiTinh, DiaChi, DienThoai, CMND,Email, NgayNhanViec,TinhTrangLaiXe) values ('" + txtMaLaiXe.Text + "', N'" + txtTenLaiXe.Text + "', '" + dtpNgaySinh.Text + "','" + txtGioiTinh.Text + "', N'" + txtDiaChi.Text + "', '" + txtDienThoai.Text + "', '" + txtCMND.Text + "', '" + txtEmail.Text + "', '" + dtpNgayNhanViec.Text + "', N'" + txtTinhTrangLaiXe.Text + "')", con);
                 cmd.ExecuteNonQuery();
                 dgvQuanLyLaiXe.DataSource = DS_LaiXe() ;
                 con.Close();
@@ -101,7 +101,7 @@ namespace quanlyxe
 
                 SqlConnection con = new SqlConnection(Program.strconn);
                 con.Open();
-                SqlCommand cmd = new SqlCommand("update  tb_LaiXe set TenLaiXe = '" + txtTenLaiXe.Text + "', NgaySinh = '" + dtpNgaySinh.Text + "', GioiTinh = '" + txtGioiTinh.Text + "', DiaChi = '" + txtDiaChi.Text + "', DienThoai = '" + txtDienThoai.Text + "', CMND = '" + txtCMND.Text + "', Email = '" + txtEmail.Text + "', NgayNhanViec = '" + dtpNgayNhanViec.Text + "', TinhTrangLaiXe = '" + txtTinhTrangLaiXe.Text + "' where MaLaiXe = '" + txtMaLaiXe.Text + "' ", con);
+                SqlCommand cmd = new SqlCommand("update  tb_LaiXe set TenLaiXe = N'" + txtTenLaiXe.Text + "', NgaySinh = '" + dtpNgaySinh.Text + "', GioiTinh = '" + txtGioiTinh.Text + "', DiaChi = N'" + txtDiaChi.Text + "', DienThoai = '" + txtDienThoai.Text + "', CMND = '" + txtCMND.Text + "', Email = '" + txtEmail.Text + "', NgayNhanViec = '" + dtpNgayNhanViec.Text + "', TinhTrangLaiXe = N'" + txtTinhTrangLaiXe.Text + "' where MaLaiXe = '" + txtMaLaiXe.Text + "' ", con);
                 cmd.ExecuteNonQuery();
                 dgvQuanLyLaiXe.DataSource = DS_LaiXe();
                 MessageBox.Show("Sửa thành công", "Quản lý lái xe", MessageBoxButtons.OK, MessageBoxIcon.Information);

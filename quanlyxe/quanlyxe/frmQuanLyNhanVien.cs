@@ -54,7 +54,7 @@ namespace quanlyxe
                 }
                 SqlConnection conn = new SqlConnection(Program.strconn);
                 conn.Open();
-                SqlCommand cmd = new SqlCommand("insert into tb_NhanVien values ('" + txtMaNhanVien.Text + "', '" + txtTenNhanVien.Text + "', '" + gt + "', '" + dtpNgaySinh.Text + "', '" + txtDiaChi.Text + "', '" + txtDienThoai.Text + "', '" + txtEmail.Text + "', '" + txtbangCap.Text + "', '" + txtCMND.Text + "', '" + dtpNgayVaoLam.Text + "')", conn);
+                SqlCommand cmd = new SqlCommand("insert into tb_NhanVien values ('" + txtMaNhanVien.Text + "',N'"+txtHoNV.Text+"', N'" + txtTenNhanVien.Text + "', '" + gt + "', '" + dtpNgaySinh.Text + "', N'" + txtDiaChi.Text + "', '" + txtDienThoai.Text + "', '" + txtEmail.Text + "', N'" + txtbangCap.Text + "', '" + txtCMND.Text + "', '" + dtpNgayVaoLam.Text + "')", conn);
                 cmd.ExecuteNonQuery();
                 dtgQuanLyNhanVien.DataSource = DS_NhanVien();
                 MessageBox.Show("Thêm thành công", "Quản lý nhân viên", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -92,7 +92,7 @@ namespace quanlyxe
                     }
                     SqlConnection conn = new SqlConnection(Program.strconn);
                     conn.Open();
-                    SqlCommand cmd = new SqlCommand("update tb_NhanVien set TenNhanVien = '" + txtTenNhanVien.Text + "', GioiTinh = '" + gt + "', NgaySinh = '" + dtpNgaySinh.Text + "', DiaChi = '" + txtDiaChi.Text + "', DienThoai = '" + txtDienThoai.Text + "', Email = '" + txtEmail.Text + "', BangCap = '" + txtbangCap.Text + "', CMND = '" + txtCMND.Text + "', NgayVaoLam = '" + dtpNgayVaoLam.Text + "' where MaNhanVien = '" + txtMaNhanVien.Text + "'  ", conn);
+                    SqlCommand cmd = new SqlCommand("update tb_NhanVien set HoNhanVien=N'"+txtHoNV.Text+"', TenNhanVien = N'" + txtTenNhanVien.Text + "', GioiTinh = '" + gt + "', NgaySinh = '" + dtpNgaySinh.Text + "', DiaChi = N'" + txtDiaChi.Text + "', DienThoai = '" + txtDienThoai.Text + "', Email = '" + txtEmail.Text + "', BangCap = N'" + txtbangCap.Text + "', CMND = '" + txtCMND.Text + "', NgayVaoLam = '" + dtpNgayVaoLam.Text + "' where MaNhanVien = '" + txtMaNhanVien.Text + "'  ", conn);
                     //SqlCommand cmd = new SqlCommand("update tb_NhanVirn set TenNhanVien = '"+txtTenNhanVien.Text+"', GioiTinh = '"+txtGioiTinh.Text+"', NgaySinh = '"+dtpNgaySinh.Text+"', DiaChi = '"+txtDiaChi.Text+"', DienThoai = '"+txtDienThoai.Text+"', Email = '"+txtEmail.Text+", BangCap = '"+txtbangCap.Text+"', CMND = '"+txtCMND.Text+"', NgayVaoLam = '"+dtpNgayVaoLam.Text+"' where MaNhanVien = '"+txtMaNhanVien.Text+"' ", con);
                     cmd.ExecuteNonQuery();
                     dtgQuanLyNhanVien.DataSource = DS_NhanVien();
@@ -107,7 +107,7 @@ namespace quanlyxe
             {
                 SqlConnection conn = new SqlConnection(Program.strconn);
                 conn.Open();
-                SqlDataAdapter da = new SqlDataAdapter("select row_number() over (order by MaNhanVien) as STT, MaNhanVien as [Mã nhân viên], TenNhanVien as [Tên nhân viên], case when GioiTinh='1' then 'Nam' else N'Nữ' end as [Giới tính], NgaySinh as [Ngày sinh], DiaChi as  [Địa chỉ], DienThoai as [Điện thoại], Email, BangCap as [Bằng cấp], CMND, NgayVaoLam as [Ngày vào làm] from tb_NhanVien ", conn);
+                SqlDataAdapter da = new SqlDataAdapter("select row_number() over (order by MaNhanVien) as STT, MaNhanVien as [Mã nhân viên],HoNhanVien as [Họ Nhân Viên], TenNhanVien as [Tên nhân viên], case when GioiTinh='1' then 'Nam' else N'Nữ' end as [Giới tính], NgaySinh as [Ngày sinh], DiaChi as  [Địa chỉ], DienThoai as [Điện thoại], Email, BangCap as [Bằng cấp], CMND, NgayVaoLam as [Ngày vào làm] from tb_NhanVien ", conn);
                 DataTable dt = new DataTable();
                 dt.Clear();
                 da.Fill(dt);

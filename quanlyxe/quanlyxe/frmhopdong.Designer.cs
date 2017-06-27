@@ -88,8 +88,9 @@
             this.dtgThemKhachHang.Location = new System.Drawing.Point(7, 161);
             this.dtgThemKhachHang.Name = "dtgThemKhachHang";
             this.dtgThemKhachHang.ReadOnly = true;
-            this.dtgThemKhachHang.Size = new System.Drawing.Size(902, 82);
+            this.dtgThemKhachHang.Size = new System.Drawing.Size(826, 105);
             this.dtgThemKhachHang.TabIndex = 2;
+            this.dtgThemKhachHang.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgThemKhachHang_CellContentClick);
             // 
             // dtpNgaySinh
             // 

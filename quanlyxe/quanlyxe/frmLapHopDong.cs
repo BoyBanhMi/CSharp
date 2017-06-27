@@ -63,7 +63,7 @@ namespace quanlyxe
             {
                 SqlConnection connDB = new SqlConnection(Program.strconn);
                 connDB.Open();
-                string cmd = "UPDATE tb_HopDong SET TenHopDong='" + tenhd + "', NgayLapHopDong='" + ngaylap + "', MaNhanVien='" + manv + "', MaKhachHang='" + makh + "', HanThanhToan='" + ngaythanhtoan + "', TinhTrangThanhToan='" + x + "' WHERE MaHopDong='" + mahd + "'";
+                string cmd = "UPDATE tb_HopDong SET TenHopDong=N'" + tenhd + "', NgayLapHopDong='" + ngaylap + "', MaNhanVien='" + manv + "', MaKhachHang='" + makh + "', HanThanhToan='" + ngaythanhtoan + "', TinhTrangThanhToan='" + x + "' WHERE MaHopDong='" + mahd + "'";
                 SqlCommand sqlCmd = new SqlCommand(cmd, connDB);
                 sqlCmd.ExecuteNonQuery();
                 connDB.Close();
@@ -171,7 +171,7 @@ namespace quanlyxe
             cbbMaNV.ValueMember = "MaNhanVien";
             
             cbbMaKH.DataSource = DS_KH();
-            cbbMaKH.DisplayMember = "TenKhachHang";
+            cbbMaKH.DisplayMember = "MaKhachHang";
             cbbMaKH.ValueMember = "MaKhachHang";
 
             cbb_gia.DataSource = ds_Gia();
