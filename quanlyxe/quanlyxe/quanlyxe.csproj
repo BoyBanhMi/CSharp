@@ -68,17 +68,27 @@
     <Compile Include="admin.Designer.cs">
       <DependentUpon>admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="baocaohopdongnew.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>baocaohopdongnew.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BC_HopDong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BC_HopDong.Designer.cs">
+      <DependentUpon>BC_HopDong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="demo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>demo.xsd</DependentUpon>
+    </Compile>
     <Compile Include="frmBaoCao.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmBaoCao.Designer.cs">
       <DependentUpon>frmBaoCao.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmBC_HopDong.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmBC_HopDong.Designer.cs">
-      <DependentUpon>frmBC_HopDong.cs</DependentUpon>
     </Compile>
     <Compile Include="frmBC_KH.cs">
       <SubType>Form</SubType>
@@ -236,6 +246,11 @@
     <Compile Include="frm_TraTien.Designer.cs">
       <DependentUpon>frm_TraTien.cs</DependentUpon>
     </Compile>
+    <Compile Include="hd.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>hd.xsd</DependentUpon>
+    </Compile>
     <Compile Include="NhanVien_RPT.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -278,17 +293,22 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>qlxDataSet6.xsd</DependentUpon>
     </Compile>
+    <Compile Include="qlxDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>qlxDataSet7.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Xe_rpt.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Xe_rpt.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BC_HopDong.resx">
+      <DependentUpon>BC_HopDong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BC_KhachHang.rdlc" />
     <EmbeddedResource Include="frmBaoCao.resx">
       <DependentUpon>frmBaoCao.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmBC_HopDong.resx">
-      <DependentUpon>frmBC_HopDong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmBC_KH.resx">
       <DependentUpon>frmBC_KH.cs</DependentUpon>
@@ -379,12 +399,48 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="rptbaocaoHD1.rdlc" />
+    <EmbeddedResource Include="rptBaoCaoHopDong.rdlc" />
     <EmbeddedResource Include="rptBC_LaiXe.rdlc" />
+    <EmbeddedResource Include="rptHopDong.rdlc" />
     <EmbeddedResource Include="rptPhieuTra.rdlc" />
     <EmbeddedResource Include="rptPhieuTraTheoHD.rdlc" />
     <EmbeddedResource Include="rptThanhToan.rdlc" />
     <EmbeddedResource Include="rptXe.rdlc" />
-    <EmbeddedResource Include="rpt_HopDong.rdlc" />
+    <None Include="baocaohopdongnew.xsc">
+      <DependentUpon>baocaohopdongnew.xsd</DependentUpon>
+    </None>
+    <None Include="baocaohopdongnew.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>baocaohopdongnew.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="baocaohopdongnew.xss">
+      <DependentUpon>baocaohopdongnew.xsd</DependentUpon>
+    </None>
+    <None Include="demo.xsc">
+      <DependentUpon>demo.xsd</DependentUpon>
+    </None>
+    <None Include="demo.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>demo.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="demo.xss">
+      <DependentUpon>demo.xsd</DependentUpon>
+    </None>
+    <None Include="hd.xsc">
+      <DependentUpon>hd.xsd</DependentUpon>
+    </None>
+    <None Include="hd.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>hd.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="hd.xss">
+      <DependentUpon>hd.xsd</DependentUpon>
+    </None>
     <None Include="NhanVien_RPT.xsc">
       <DependentUpon>NhanVien_RPT.xsd</DependentUpon>
     </None>
@@ -437,6 +493,17 @@
     </None>
     <None Include="qlxDataSet6.xss">
       <DependentUpon>qlxDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="qlxDataSet7.xsc">
+      <DependentUpon>qlxDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="qlxDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>qlxDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="qlxDataSet7.xss">
+      <DependentUpon>qlxDataSet7.xsd</DependentUpon>
     </None>
     <None Include="Xe_rpt.xsc">
       <DependentUpon>Xe_rpt.xsd</DependentUpon>
@@ -555,6 +622,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icon.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\19532480_1925860334361640_504123563_o.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

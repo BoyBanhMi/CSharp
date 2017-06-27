@@ -27,7 +27,6 @@ E:\do an\demo\quanlyxe\quanlyxe\obj\Debug\quanlyxe.frmtimlaixe.resources
 E:\do an\demo\quanlyxe\quanlyxe\obj\Debug\quanlyxe.frmtimnhanvien.resources
 E:\do an\demo\quanlyxe\quanlyxe\obj\Debug\quanlyxe.frm_TraTien.resources
 E:\do an\demo\quanlyxe\quanlyxe\obj\Debug\quanlyxe.frmBaoCao.resources
-E:\do an\demo\quanlyxe\quanlyxe\obj\Debug\quanlyxe.frmBC_HopDong.resources
 E:\do an\demo\quanlyxe\quanlyxe\obj\Debug\RdlCompile.cache
 E:\do an\demo\quanlyxe\quanlyxe\obj\Debug\RdlCompile.compiled
 E:\do an\demo\quanlyxe\quanlyxe\obj\Debug\quanlyxe.frmBC_LaiXe.resources
@@ -36,3 +35,4 @@ E:\do an\demo\quanlyxe\quanlyxe\obj\Debug\quanlyxe.frmBC_NhanVien.resources
 E:\do an\demo\quanlyxe\quanlyxe\obj\Debug\quanlyxe.frmBC_Xe.resources
 E:\do an\demo\quanlyxe\quanlyxe\obj\Debug\quanlyxe.frmInPhieuTra.resources
 E:\do an\demo\quanlyxe\quanlyxe\obj\Debug\quanlyxe.frmBC_PhieuTra.resources
+E:\do an\demo\quanlyxe\quanlyxe\obj\Debug\quanlyxe.BC_HopDong.resources

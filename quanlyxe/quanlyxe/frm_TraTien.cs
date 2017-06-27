@@ -86,11 +86,11 @@ namespace quanlyxe
            try
            {
 
-                int gia = 500;
+                
                 SqlConnection con = new SqlConnection(Program.strconn);
                 
                 SqlCommand sqlcm = new SqlCommand("select DAY(NgayLapHopDong),DAY(HanThanhToan), TienCoc, NgayLapHopDong, HanThanhToan,TinhTrangThanhToan,Gia from tb_HopDong where MaHopDong='" + mahd + "'", con);
-                SqlCommand sqlc1m = new SqlCommand("select DonGia from tb_Gia where tb_HopDong.MaGia=tb_Gia.MaGia", con);
+                
                 con.Open();
                 SqlDataReader dr = sqlcm.ExecuteReader();
                

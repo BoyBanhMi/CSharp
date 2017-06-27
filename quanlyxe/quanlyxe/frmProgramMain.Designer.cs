@@ -137,6 +137,7 @@
             // pnProMain
             // 
             this.pnProMain.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.pnProMain.BackgroundImage = global::quanlyxe.Properties.Resources._19532480_1925860334361640_504123563_o;
             this.pnProMain.Location = new System.Drawing.Point(2, 71);
             this.pnProMain.Name = "pnProMain";
             this.pnProMain.Size = new System.Drawing.Size(1257, 660);

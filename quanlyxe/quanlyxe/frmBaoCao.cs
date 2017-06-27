@@ -19,11 +19,10 @@ namespace quanlyxe
 
         private void btn_HD_Click(object sender, EventArgs e)
         {
-            frmBC_HopDong f = new frmBC_HopDong();
-            f.TopLevel = false;
+            BC_HopDong f = new BC_HopDong();
+            
             f.Show();
-            pn_baocao.Controls.Clear();
-            pn_baocao.Controls.Add(f);
+         
         }
 
         private void btn_KH_Click(object sender, EventArgs e)

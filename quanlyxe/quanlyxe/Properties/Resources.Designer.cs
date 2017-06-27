@@ -63,6 +63,16 @@ namespace quanlyxe.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _19532480_1925860334361640_504123563_o {
+            get {
+                object obj = ResourceManager.GetObject("19532480_1925860334361640_504123563_o", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _58950 {
             get {
                 object obj = ResourceManager.GetObject("58950", resourceCulture);
