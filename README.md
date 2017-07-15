@@ -2,6 +2,7 @@
 ![a](https://user-images.githubusercontent.com/27596661/28235914-d6ff2b0a-6942-11e7-8c61-2013b95c1303.PNG)
 ## Lời mở đầu
 ## Giấy Phép
+Vui lòng xem tại 
 [MIT License](https://github.com/F4Team-DHCN1A/QLSV/blob/master/LICENSE) **Copyright © 2017** *F4 Team* - **Telecommunications University**
 
 ## Thông tin tổ chức mã nguồn 
