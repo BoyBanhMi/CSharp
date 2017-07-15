@@ -12,7 +12,7 @@
 
 * Tầng `QuanLySinhVien_BLL` chứa các module dữ liệu, file *DB_connect.cs* chứa kết nối đến **CSDL**
 
-* Tầng `QuanLySinhVien_GUI` chứa các Form giao diện, *frmProMain.cs* trong tầng này sẽ là chương trình chính gọi tất cả các module khác khi click sự kiện.
+* Tầng `QuanLySinhVien_GUI` chứa các Form giao diện, *frmProMain.cs* trong tầng này sẽ là chương trình chính gọi tất cả các Form khác khi click sự kiện.
 
 ## Nền tảng xây dựng
 #### [C# .NET](https://docs.microsoft.com/en-us/dotnet/csharp/getting-started/introduction-to-the-csharp-language-and-the-net-framework) - Nền tảng hệ thống phần mềm
