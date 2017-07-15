@@ -10,7 +10,7 @@
 #### Mã nguồn được phân chia theo 3 Tầng như sau: 
 * Tầng `QuanLySinhVien_BLL` chứa các module xử lý các sự kiện trong từng Form giao diện,
 
-* Tầng `QuanLySinhVien_BLL` chứa các module dữ liệu, file *DB_connect.cs* chứa kết nối đến **CSDL**
+* Tầng `QuanLySinhVien_BLL` chứa các module dữ liệu, file *DB_connect.cs* chứa kết nối đến **CSDL**, file *Data.cs* chứa dữ liệu từ các bảng trong  **CSDL** 
 
 * Tầng `QuanLySinhVien_GUI` chứa các Form giao diện, *frmProMain.cs* trong tầng này sẽ là chương trình chính gọi tất cả các Form khác khi click sự kiện.
 
