@@ -8,7 +8,7 @@
 ![a](https://user-images.githubusercontent.com/27596661/28235728-3a03d372-693e-11e7-80e3-f40cba1c35f4.png)
 ![a](https://user-images.githubusercontent.com/27596661/28235747-afaa6334-693e-11e7-86c3-b8993361b441.png)
 #### Mã nguồn được phân chia theo 3 Tầng như sau: 
-* Tầng `QuanLySinhVien_BLL` chứa các module xử lý các sự kiện trong từng Form giao diện,
+* Tầng `QuanLySinhVien_BLL` chứa các module xử lý các sự kiện trong từng Form giao diện, file *xulichuoi.cs* đảm nhiệm việc định dạng dữ liệu vào theo chuẩn
 
 * Tầng `QuanLySinhVien_BLL` chứa các module dữ liệu, file *DB_connect.cs* chứa kết nối đến **CSDL**, file *Data.cs* chứa dữ liệu từ các bảng trong  **CSDL** 
 
