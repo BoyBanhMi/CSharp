@@ -50,4 +50,4 @@ Nhằm tạo ra phần mềm đầy đủ, hoàn thiện và có chất lượng
 2.	Trên Website [Sharecode.vn](https://sharecode.vn/source-code/phan-mem-quan-ly-sinh-vien-13414.htm) cho mọi người cần tham khảo và đóng góp
 
 ## Lời cảm ơn
-Để hoàn thành tốt đề tài này chúng em xin cảm ơn thầy Mai Cường Thọ – giảng viên khoa CNTT Trường Đại học Nha Trang cùng các thầy cô bộ môn Kỹ thuật phần mềm đã hướng dẫn tạo điều kiện cho chúng em nghiên cứu và hoàn thành đề tài. Một lần nữa chúng em xin trân trọng cảm ơn thầy Mai Cường Thọ đã tận tình giúp đỡ, hướng dẫn chúng em trong suốt quá trình thực hiện đề tài.
+Để hoàn thành tốt đề tài này chúng em xin cảm ơn thầy **Mai Cường Thọ** – *giảng viên khoa CNTT Trường Đại học Nha Trang* cùng các **thầy cô** *bộ môn Kỹ thuật phần mềm*đã hướng dẫn tạo điều kiện cho chúng em nghiên cứu và hoàn thành đề tài. Một lần nữa chúng em xin trân trọng cảm ơn thầy **Mai Cường Thọ** đã tận tình giúp đỡ, hướng dẫn chúng em trong suốt quá trình thực hiện đề tài.
