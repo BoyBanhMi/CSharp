@@ -35,4 +35,12 @@ SQL Server là một hệ quản trị cơ sở dữ liệu quan hệ (Relationa
 
 SQL Server được tối ưu để có thể chạy trên môi trường cơ sở dữ liệu rất lớn (Very Large Database Environment) lên đến Tera-Byte và có thể phục vụ cùng lúc cho hàng ngàn user. SQL Server có thể kết hợp “ăn ý” với các server khác như Microsoft Internet Information Server (IIS), E-Commerce Server, Proxy Server….
 
-
+## Chuẩn lập trình
+## Tài liệu cho người dùng cuối
+## Tài liệu cho nhà phát triển
+## Tài liệu thiết kế
+## Danh sách lỗi
+## Cách lấy mã và đóng góp mã nguồn
+## Kênh truyền thông cho dự án
+## Lời cảm ơn
+* <Lời cảm ơn>
