@@ -37,6 +37,7 @@
 
 ## Chuẩn lập trình
 ## Tài liệu cho người dùng cuối
+* Để xem tài liệu cho người dùng cuối, Vui lòng tham khảo [tại đây](https://github.com/F4Team-DHCN1A/QLSV/blob/master/Document/T%C3%A0i%20li%E1%BB%87u%20cho%20ng%C6%B0%E1%BB%9Di%20d%C3%B9ng%20cu%E1%BB%91i.md)
 ## Tài liệu cho nhà phát triển
 ## Tài liệu thiết kế
 ## Danh sách lỗi
