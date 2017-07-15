@@ -15,14 +15,14 @@
 * Tầng `QuanLySinhVien_GUI` chứa các Form giao diện.
 
 ## Nền tảng xây dựng
-[C# .NET](https://docs.microsoft.com/en-us/dotnet/csharp/getting-started/introduction-to-the-csharp-language-and-the-net-framework) - Nền tảng hệ thống phần mềm
+### [C# .NET](https://docs.microsoft.com/en-us/dotnet/csharp/getting-started/introduction-to-the-csharp-language-and-the-net-framework) - Nền tảng hệ thống phần mềm
 * C # là một ngôn ngữ lập trình hiện đại được phát triển bởi Microsoft và được phê duyệt bởi European Computer Manufacturers Association (ECMA) và International Standards Organization (ISO).
 
 * C # được phát triển bởi Anders Hejlsberg và nhóm của ông trong việc phát triển .Net Framework.
 
 * C # được thiết kế cho các ngôn ngữ chung cơ sở hạ tầng (Common Language Infrastructure – CLI), trong đó bao gồm các mã (Executable Code) và môi trường thực thi (Runtime Environment) cho phép sử dụng các ngôn ngữ cấp cao khác nhau trên đa nền tảng máy tính và kiến trúc khác nhau.
 
-Ngôn ngữ ra đời cùng với .NET
+### Ngôn ngữ ra đời cùng với .NET
 
 * Kết hợp C++ và Java. Hướng đối tượng. Hướng thành phần. Mạnh mẽ (robust) và bền vững (durable). Mọi thứ trong C# đều Object oriented. Kể cả kiểu dữ liệu cơ bản. Chỉ cho phép đơn kế thừa. Dùng interface để khắc phục. Lớp Object là cha của tất cả các lớp. Mọi lớp đều dẫn xuất từ Object. Cho phép chia chương trình thành các thành phần nhỏ độc lập nhau. Mỗi lớp gói gọn trong một file, không cần file header như C/C++. Bổ sung khái niệm namespace để gom nhóm các lớp. Bổ sung khái niệm “property” cho các lớp. Khái niệm delegate & event
 
