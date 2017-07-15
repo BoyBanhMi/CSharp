@@ -34,6 +34,7 @@
 * SQL Server là một hệ quản trị cơ sở dữ liệu quan hệ (Relational Database Management System (RDBMS) ) sử dụng câu lệnh SQL (Transact-SQL) để trao đổi dữ liệu giữa máy Client và máy cài SQL Server. Một RDBMS bao gồm databases, database engine và các ứng dụng dùng để quản lý dữ liệu và các bộ phận khác nhau trong RDBMS.
 
 * SQL Server được tối ưu để có thể chạy trên môi trường cơ sở dữ liệu rất lớn (Very Large Database Environment) lên đến Tera-Byte và có thể phục vụ cùng lúc cho hàng ngàn user. SQL Server có thể kết hợp “ăn ý” với các server khác như Microsoft Internet Information Server (IIS), E-Commerce Server, Proxy Server….
+> T/g: Nguyễn Minh Thuận
 
 ## Chuẩn lập trình
 ## Tài liệu cho người dùng cuối
@@ -42,13 +43,17 @@
 ## Tài liệu thiết kế
 ## Danh sách lỗi
 `Phần mềm chưa được hoàn thiện, huy vọng các bạn đóng góp ý kiến hay update danh sách các lỗi` [tại đây](https://github.com/F4Team-DHCN1A/QLSV/issues) `để nhóm hay các nhà phát triển khác có thể hoàn thiện sản phẩm hơn.`
+> T/g: Lê Văn Cường
 ## Cách lấy mã và đóng góp mã nguồn
 * Các bạn [click vào đây](https://github.com/F4Team-DHCN1A/QLSV/archive/master.zip) để Download mã nguồn,
 * Để đóng góp mã nguồn hay phản hồi [tại đây](https://github.com/F4Team-DHCN1A/QLSV/issues) hoặc gửi vào hộp thư điện tử `lecuong15796@gmail.com`.
+> T/g: Lê Văn Cường
 ## Kênh truyền thông cho dự án
 Nhằm tạo ra phần mềm đầy đủ, hoàn thiện và có chất lượng cao, dự án được chia sẻ trên lên internet dưới dạng mã nguồn mở để mọi người cùng tham gia đánh giá, nhận xét cũng như xây dựng phần mềm hoàn thiện hơn.
 1.	Trang [facebook](https://www.facebook.com/%E1%BB%A8ng-d%E1%BB%A5ng-ph%E1%BA%A7n-m%E1%BB%81m-qu%E1%BA%A3n-l%C3%BD-sinh-vi%C3%AAn-107568713233555/) của dự án, Luôn tiếp nhận các ý kiến đóng góp từ cộng đồng
 2.	Trên Website [Sharecode.vn](https://sharecode.vn/source-code/phan-mem-quan-ly-sinh-vien-13414.htm) cho mọi người cần tham khảo và đóng góp
+> T/g: Triệu Nam Dương
 
 ## Lời cảm ơn
 Để hoàn thành tốt đề tài này chúng em xin cảm ơn thầy **Mai Cường Thọ** – *giảng viên khoa CNTT Trường Đại học Nha Trang* cùng các **thầy cô** *bộ môn Kỹ thuật phần mềm* đã hướng dẫn tạo điều kiện cho chúng em nghiên cứu và hoàn thành đề tài. Một lần nữa chúng em xin trân trọng cảm ơn thầy **Mai Cường Thọ** đã tận tình giúp đỡ, hướng dẫn chúng em trong suốt quá trình thực hiện đề tài.
+> T/g: Triệu Nam Dương
