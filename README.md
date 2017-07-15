@@ -1,5 +1,5 @@
 ﻿# PHẦN MỀM QUẢN LÝ SINH VIÊN
-![a](https://user-images.githubusercontent.com/27407242/26913937-572085ee-4c48-11e7-9a62-259c3f6a2b08.jpg)
+![a](https://user-images.githubusercontent.com/27596661/28235914-d6ff2b0a-6942-11e7-8c61-2013b95c1303.PNG)
 ## Lời mở đầu
 ## Giấy Phép
 ![MIT](https://github.com/F4Team-DHCN1A/QLSV/blob/master/LICENSE) Copyright © 2017 F4 Team - Telecommunications University(<a>)
@@ -34,3 +34,5 @@ MS SQL Server - Nền tảng cơ sở dữ liệu
 SQL Server là một hệ quản trị cơ sở dữ liệu quan hệ (Relational Database Management System (RDBMS) ) sử dụng câu lệnh SQL (Transact-SQL) để trao đổi dữ liệu giữa máy Client và máy cài SQL Server. Một RDBMS bao gồm databases, database engine và các ứng dụng dùng để quản lý dữ liệu và các bộ phận khác nhau trong RDBMS.
 
 SQL Server được tối ưu để có thể chạy trên môi trường cơ sở dữ liệu rất lớn (Very Large Database Environment) lên đến Tera-Byte và có thể phục vụ cùng lúc cho hàng ngàn user. SQL Server có thể kết hợp “ăn ý” với các server khác như Microsoft Internet Information Server (IIS), E-Commerce Server, Proxy Server….
+
+
