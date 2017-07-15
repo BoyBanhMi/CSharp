@@ -45,5 +45,9 @@
 * Các bạn [click vào đây](https://github.com/F4Team-DHCN1A/QLSV/archive/master.zip) để Download mã nguồn,
 * Để đóng góp mã nguồn hay phản hồi [tại đây](https://github.com/F4Team-DHCN1A/QLSV/issues) hoặc gửi vào hộp thư điện tử `lecuong15796@gmail.com`.
 ## Kênh truyền thông cho dự án
+Nhằm tạo ra phần mềm đầy đủ, hoàn thiện và có chất lượng cao, dự án được chia sẻ trên lên internet dưới dạng mã nguồn mở để mọi người cùng tham gia đánh giá, nhận xét cũng như xây dựng phần mềm hoàn thiện hơn.
+1.	Trang [facebook](https://www.facebook.com/%E1%BB%A8ng-d%E1%BB%A5ng-ph%E1%BA%A7n-m%E1%BB%81m-qu%E1%BA%A3n-l%C3%BD-sinh-vi%C3%AAn-107568713233555/) của dự án, Luôn tiếp nhận các ý kiến đóng góp từ cộng đồng
+2.	Trên Website [Sharecode.vn](https://sharecode.vn/source-code/phan-mem-quan-ly-sinh-vien-13414.htm) cho mọi người cần tham khảo và đóng góp
+
 ## Lời cảm ơn
-* <Lời cảm ơn>
+Để hoàn thành tốt đề tài này chúng em xin cảm ơn thầy Mai Cường Thọ – giảng viên khoa CNTT Trường Đại học Nha Trang cùng các thầy cô bộ môn Kỹ thuật phần mềm đã hướng dẫn tạo điều kiện cho chúng em nghiên cứu và hoàn thành đề tài. Một lần nữa chúng em xin trân trọng cảm ơn thầy Mai Cường Thọ đã tận tình giúp đỡ, hướng dẫn chúng em trong suốt quá trình thực hiện đề tài.
