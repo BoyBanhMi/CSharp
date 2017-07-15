@@ -43,7 +43,7 @@
 `Phần mềm chưa được hoàn thiện, huy vọng các bạn đóng góp ý kiến hay update danh sách các lỗi` [tại đây](https://github.com/F4Team-DHCN1A/QLSV/issues) `để nhóm hay các nhà phát triển khác có thể hoàn thiện sản phẩm hơn.`
 ## Cách lấy mã và đóng góp mã nguồn
 * Các bạn [click vào đây](https://github.com/F4Team-DHCN1A/QLSV/archive/master.zip) để Download mã nguồn,
-* Để đóng góp mã nguồn hay phản hồi [tại đây](https://github.com/F4Team-DHCN1A/QLSV/issues) hoặc gởi vào hộp thư điện tử `lecuong15796@gmail.com`.
+* Để đóng góp mã nguồn hay phản hồi [tại đây](https://github.com/F4Team-DHCN1A/QLSV/issues) hoặc gửi vào hộp thư điện tử `lecuong15796@gmail.com`.
 ## Kênh truyền thông cho dự án
 ## Lời cảm ơn
 * <Lời cảm ơn>
